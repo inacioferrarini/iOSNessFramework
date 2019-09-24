@@ -1,0 +1,5 @@
+author: Inácio Ferrarini
+module: Ness
+output: docs
+theme: fullwidth
+xcodebuild_arguments: [-project, 'Ness.xcodeproj', -scheme, 'Ness']
