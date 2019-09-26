@@ -365,6 +365,28 @@
 			path = Providers;
 			sourceTree = "<group>";
 		};
+		BBBC157A233D6FB000467BD4 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		BBBC1585233D706300467BD4 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC1586233D706C00467BD4 /* Providers */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		BBBC1586233D706C00467BD4 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
 		BBD5090D2337E2E4009CA4EE = {
 			isa = PBXGroup;
 			children = (
@@ -403,11 +425,13 @@
 		BBD509242337E2E5009CA4EE /* NessTests */ = {
 			isa = PBXGroup;
 			children = (
+				BBBC1554233D654300467BD4 /* TestResources */,
 				BBBC1539233D63B400467BD4 /* HelperClasses */,
 				BBBC156C233D6D3800467BD4 /* Core */,
+				BBBC1585233D706300467BD4 /* CoreData */,
 				BBBC156D233D6D5D00467BD4 /* Extensions */,
-				BBBC1554233D654300467BD4 /* TestResources */,
 				BBBC154F233D652800467BD4 /* Internationalization */,
+				BBBC157A233D6FB000467BD4 /* UIKit */,
 				BBD509272337E2E5009CA4EE /* Info.plist */,
 			);
 			path = NessTests;
