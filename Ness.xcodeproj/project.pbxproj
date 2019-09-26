@@ -29,6 +29,11 @@
 		BBBC1536233D61F700467BD4 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1523233D61F700467BD4 /* DataProvider.swift */; };
 		BBBC1537233D61F700467BD4 /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1524233D61F700467BD4 /* Refreshable.swift */; };
 		BBBC1538233D61F700467BD4 /* ArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1526233D61F700467BD4 /* ArrayDataSource.swift */; };
+		BBBC153E233D63B400467BD4 /* TestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC153B233D63B400467BD4 /* TestClass.swift */; };
+		BBBC153F233D63B400467BD4 /* TestClass.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBBC153C233D63B400467BD4 /* TestClass.strings */; };
+		BBBC1552233D652800467BD4 /* InternationalizableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1550233D652800467BD4 /* InternationalizableSpec.swift */; };
+		BBBC1553233D652800467BD4 /* StringsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1551233D652800467BD4 /* StringsSpec.swift */; };
+		BBBC1558233D654300467BD4 /* StringsSpec.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBBC1555233D654300467BD4 /* StringsSpec.strings */; };
 		BBD509212337E2E5009CA4EE /* Ness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD509172337E2E4009CA4EE /* Ness.framework */; };
 		BBD509282337E2E5009CA4EE /* Ness.h in Headers */ = {isa = PBXBuildFile; fileRef = BBD5091A2337E2E4009CA4EE /* Ness.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -78,6 +83,12 @@
 		BBBC1523233D61F700467BD4 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		BBBC1524233D61F700467BD4 /* Refreshable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
 		BBBC1526233D61F700467BD4 /* ArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayDataSource.swift; sourceTree = "<group>"; };
+		BBBC153B233D63B400467BD4 /* TestClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestClass.swift; sourceTree = "<group>"; };
+		BBBC153D233D63B400467BD4 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/TestClass.strings"; sourceTree = "<group>"; };
+		BBBC1550233D652800467BD4 /* InternationalizableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternationalizableSpec.swift; sourceTree = "<group>"; };
+		BBBC1551233D652800467BD4 /* StringsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsSpec.swift; sourceTree = "<group>"; };
+		BBBC1556233D654300467BD4 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/StringsSpec.strings"; sourceTree = "<group>"; };
+		BBBC1557233D654300467BD4 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/StringsSpec.strings"; sourceTree = "<group>"; };
 		BBD509172337E2E4009CA4EE /* Ness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD5091A2337E2E4009CA4EE /* Ness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ness.h; sourceTree = "<group>"; };
 		BBD5091B2337E2E4009CA4EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -262,6 +273,40 @@
 			path = Arrays;
 			sourceTree = "<group>";
 		};
+		BBBC1539233D63B400467BD4 /* HelperClasses */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC153A233D63B400467BD4 /* Internationalization */,
+			);
+			path = HelperClasses;
+			sourceTree = "<group>";
+		};
+		BBBC153A233D63B400467BD4 /* Internationalization */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC153B233D63B400467BD4 /* TestClass.swift */,
+				BBBC153C233D63B400467BD4 /* TestClass.strings */,
+			);
+			path = Internationalization;
+			sourceTree = "<group>";
+		};
+		BBBC154F233D652800467BD4 /* Internationalization */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC1550233D652800467BD4 /* InternationalizableSpec.swift */,
+				BBBC1551233D652800467BD4 /* StringsSpec.swift */,
+			);
+			path = Internationalization;
+			sourceTree = "<group>";
+		};
+		BBBC1554233D654300467BD4 /* TestResources */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC1555233D654300467BD4 /* StringsSpec.strings */,
+			);
+			path = TestResources;
+			sourceTree = "<group>";
+		};
 		BBD5090D2337E2E4009CA4EE = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +345,9 @@
 		BBD509242337E2E5009CA4EE /* NessTests */ = {
 			isa = PBXGroup;
 			children = (
+				BBBC1539233D63B400467BD4 /* HelperClasses */,
+				BBBC154F233D652800467BD4 /* Internationalization */,
+				BBBC1554233D654300467BD4 /* TestResources */,
 				BBD509272337E2E5009CA4EE /* Info.plist */,
 			);
 			path = NessTests;
@@ -382,6 +430,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"en-US",
+				"pt-BR",
 			);
 			mainGroup = BBD5090D2337E2E4009CA4EE;
 			productRefGroup = BBD509182337E2E4009CA4EE /* Products */;
@@ -406,6 +456,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBBC1558233D654300467BD4 /* StringsSpec.strings in Resources */,
+				BBBC153F233D63B400467BD4 /* TestClass.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +513,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBBC1552233D652800467BD4 /* InternationalizableSpec.swift in Sources */,
+				BBBC1553233D652800467BD4 /* StringsSpec.swift in Sources */,
+				BBBC153E233D63B400467BD4 /* TestClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +528,26 @@
 			targetProxy = BBD509222337E2E5009CA4EE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BBBC153C233D63B400467BD4 /* TestClass.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBBC153D233D63B400467BD4 /* en-US */,
+			);
+			name = TestClass.strings;
+			sourceTree = "<group>";
+		};
+		BBBC1555233D654300467BD4 /* StringsSpec.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBBC1556233D654300467BD4 /* pt-BR */,
+				BBBC1557233D654300467BD4 /* en-US */,
+			);
+			name = StringsSpec.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BBD509292337E2E5009CA4EE /* Debug */ = {
