@@ -12,7 +12,7 @@
 		BB58BF52232E6BBC00A13142 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BB58BF4C232E6AD000A13142 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BB58BF53232E6BBC00A13142 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BB58BF4B232E6AD000A13142 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BBBC1527233D61F700467BD4 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1505233D61F600467BD4 /* Configurable.swift */; };
-		BBBC1528233D61F700467BD4 /* NSObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1507233D61F600467BD4 /* NSObjectExtensions.swift */; };
+		BBBC1528233D61F700467BD4 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1507233D61F600467BD4 /* NSObject+Extensions.swift */; };
 		BBBC1529233D61F700467BD4 /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC150B233D61F600467BD4 /* CoreDataProvider.swift */; };
 		BBBC152A233D61F700467BD4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC150D233D61F600467BD4 /* CoreDataStack.swift */; };
 		BBBC152B233D61F700467BD4 /* NSManagedObject+Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC150F233D61F600467BD4 /* NSManagedObject+Fetch.swift */; };
@@ -34,6 +34,10 @@
 		BBBC1552233D652800467BD4 /* InternationalizableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1550233D652800467BD4 /* InternationalizableSpec.swift */; };
 		BBBC1553233D652800467BD4 /* StringsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1551233D652800467BD4 /* StringsSpec.swift */; };
 		BBBC1558233D654300467BD4 /* StringsSpec.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBBC1555233D654300467BD4 /* StringsSpec.strings */; };
+		BBBC156F233D6D7C00467BD4 /* NSObject+ExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC156E233D6D7C00467BD4 /* NSObject+ExtensionsSpec.swift */; };
+		BBBC1574233D6E6500467BD4 /* ArrayDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1573233D6E6500467BD4 /* ArrayDataSourceSpec.swift */; };
+		BBBC1576233D6E9700467BD4 /* ArrayDataProviderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1575233D6E9700467BD4 /* ArrayDataProviderSpec.swift */; };
+		BBBC1579233D6F0000467BD4 /* RefreshableDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1578233D6EFF00467BD4 /* RefreshableDataProvider.swift */; };
 		BBD509212337E2E5009CA4EE /* Ness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD509172337E2E4009CA4EE /* Ness.framework */; };
 		BBD509282337E2E5009CA4EE /* Ness.h in Headers */ = {isa = PBXBuildFile; fileRef = BBD5091A2337E2E4009CA4EE /* Ness.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -66,7 +70,7 @@
 		BB58BF4B232E6AD000A13142 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		BB58BF4C232E6AD000A13142 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		BBBC1505233D61F600467BD4 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
-		BBBC1507233D61F600467BD4 /* NSObjectExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtensions.swift; sourceTree = "<group>"; };
+		BBBC1507233D61F600467BD4 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
 		BBBC150B233D61F600467BD4 /* CoreDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
 		BBBC150D233D61F600467BD4 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		BBBC150F233D61F600467BD4 /* NSManagedObject+Fetch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Fetch.swift"; sourceTree = "<group>"; };
@@ -89,6 +93,10 @@
 		BBBC1551233D652800467BD4 /* StringsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsSpec.swift; sourceTree = "<group>"; };
 		BBBC1556233D654300467BD4 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/StringsSpec.strings"; sourceTree = "<group>"; };
 		BBBC1557233D654300467BD4 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/StringsSpec.strings"; sourceTree = "<group>"; };
+		BBBC156E233D6D7C00467BD4 /* NSObject+ExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ExtensionsSpec.swift"; sourceTree = "<group>"; };
+		BBBC1573233D6E6500467BD4 /* ArrayDataSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayDataSourceSpec.swift; sourceTree = "<group>"; };
+		BBBC1575233D6E9700467BD4 /* ArrayDataProviderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayDataProviderSpec.swift; sourceTree = "<group>"; };
+		BBBC1578233D6EFF00467BD4 /* RefreshableDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshableDataProvider.swift; sourceTree = "<group>"; };
 		BBD509172337E2E4009CA4EE /* Ness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD5091A2337E2E4009CA4EE /* Ness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ness.h; sourceTree = "<group>"; };
 		BBD5091B2337E2E4009CA4EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -137,7 +145,7 @@
 		BBBC1506233D61F600467BD4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				BBBC1507233D61F600467BD4 /* NSObjectExtensions.swift */,
+				BBBC1507233D61F600467BD4 /* NSObject+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -277,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				BBBC153A233D63B400467BD4 /* Internationalization */,
+				BBBC1577233D6EFF00467BD4 /* Providers */,
 			);
 			path = HelperClasses;
 			sourceTree = "<group>";
@@ -305,6 +314,55 @@
 				BBBC1555233D654300467BD4 /* StringsSpec.strings */,
 			);
 			path = TestResources;
+			sourceTree = "<group>";
+		};
+		BBBC156C233D6D3800467BD4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC1570233D6E2300467BD4 /* DataSource */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BBBC156D233D6D5D00467BD4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC156E233D6D7C00467BD4 /* NSObject+ExtensionsSpec.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BBBC1570233D6E2300467BD4 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC1571233D6E2C00467BD4 /* Arrays */,
+				BBBC1572233D6E3C00467BD4 /* Providers */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		BBBC1571233D6E2C00467BD4 /* Arrays */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC1573233D6E6500467BD4 /* ArrayDataSourceSpec.swift */,
+			);
+			path = Arrays;
+			sourceTree = "<group>";
+		};
+		BBBC1572233D6E3C00467BD4 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC1575233D6E9700467BD4 /* ArrayDataProviderSpec.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		BBBC1577233D6EFF00467BD4 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC1578233D6EFF00467BD4 /* RefreshableDataProvider.swift */,
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 		BBD5090D2337E2E4009CA4EE = {
@@ -346,8 +404,10 @@
 			isa = PBXGroup;
 			children = (
 				BBBC1539233D63B400467BD4 /* HelperClasses */,
-				BBBC154F233D652800467BD4 /* Internationalization */,
+				BBBC156C233D6D3800467BD4 /* Core */,
+				BBBC156D233D6D5D00467BD4 /* Extensions */,
 				BBBC1554233D654300467BD4 /* TestResources */,
+				BBBC154F233D652800467BD4 /* Internationalization */,
 				BBD509272337E2E5009CA4EE /* Info.plist */,
 			);
 			path = NessTests;
@@ -492,7 +552,7 @@
 				BBBC1535233D61F700467BD4 /* ArrayDataProvider.swift in Sources */,
 				BBBC1536233D61F700467BD4 /* DataProvider.swift in Sources */,
 				BBBC152C233D61F700467BD4 /* AppContext.swift in Sources */,
-				BBBC1528233D61F700467BD4 /* NSObjectExtensions.swift in Sources */,
+				BBBC1528233D61F700467BD4 /* NSObject+Extensions.swift in Sources */,
 				BBBC152D233D61F700467BD4 /* CollectionViewArrayDataSource.swift in Sources */,
 				BBBC1529233D61F700467BD4 /* CoreDataProvider.swift in Sources */,
 				BBBC152B233D61F700467BD4 /* NSManagedObject+Fetch.swift in Sources */,
@@ -513,9 +573,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBBC1579233D6F0000467BD4 /* RefreshableDataProvider.swift in Sources */,
+				BBBC1574233D6E6500467BD4 /* ArrayDataSourceSpec.swift in Sources */,
 				BBBC1552233D652800467BD4 /* InternationalizableSpec.swift in Sources */,
 				BBBC1553233D652800467BD4 /* StringsSpec.swift in Sources */,
+				BBBC1576233D6E9700467BD4 /* ArrayDataProviderSpec.swift in Sources */,
 				BBBC153E233D63B400467BD4 /* TestClass.swift in Sources */,
+				BBBC156F233D6D7C00467BD4 /* NSObject+ExtensionsSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

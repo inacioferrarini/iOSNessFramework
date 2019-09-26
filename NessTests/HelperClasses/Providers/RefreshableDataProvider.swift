@@ -21,17 +21,15 @@
 //    SOFTWARE.
 //
 
-import Foundation
-import Common
-import Ness
+import UIKit
+@testable import Ness
 
-class TestClass {
-}
+class RefreshableDataProvider<Type: Equatable>: ArrayDataProvider<Type>, Refreshable {
 
-extension TestClass: Internationalizable {
+    open var onRefresh: (() -> Void)?
 
-    var titleString: String {
-        return string("str1", languageCode: "en-US")
+    func refresh() {
+        self.onRefresh?()
     }
-    
+
 }

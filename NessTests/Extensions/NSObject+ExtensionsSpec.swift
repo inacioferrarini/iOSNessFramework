@@ -22,16 +22,19 @@
 //
 
 import Foundation
-import Common
-import Ness
+import Quick
+import Nimble
+@testable import Ness
 
-class TestClass {
-}
+class NSObjectExtensionsSpec: QuickSpec {
 
-extension TestClass: Internationalizable {
+    override func spec() {
 
-    var titleString: String {
-        return string("str1", languageCode: "en-US")
+        it("simpleClassName must return class name") {
+            let name = NSNumber.simpleClassName()
+            expect(name).to(equal("NSNumber"))
+        }
+
     }
-    
+
 }
