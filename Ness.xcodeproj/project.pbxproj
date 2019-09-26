@@ -11,8 +11,25 @@
 		BB58BF4E232E6AD000A13142 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB58BF4C232E6AD000A13142 /* Nimble.framework */; };
 		BB58BF52232E6BBC00A13142 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BB58BF4C232E6AD000A13142 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BB58BF53232E6BBC00A13142 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BB58BF4B232E6AD000A13142 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BBBC1527233D61F700467BD4 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1505233D61F600467BD4 /* Configurable.swift */; };
+		BBBC1528233D61F700467BD4 /* NSObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1507233D61F600467BD4 /* NSObjectExtensions.swift */; };
+		BBBC1529233D61F700467BD4 /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC150B233D61F600467BD4 /* CoreDataProvider.swift */; };
+		BBBC152A233D61F700467BD4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC150D233D61F600467BD4 /* CoreDataStack.swift */; };
+		BBBC152B233D61F700467BD4 /* NSManagedObject+Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC150F233D61F600467BD4 /* NSManagedObject+Fetch.swift */; };
+		BBBC152C233D61F700467BD4 /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1511233D61F600467BD4 /* AppContext.swift */; };
+		BBBC152D233D61F700467BD4 /* CollectionViewArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1515233D61F600467BD4 /* CollectionViewArrayDataSource.swift */; };
+		BBBC152E233D61F700467BD4 /* TableViewArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1516233D61F600467BD4 /* TableViewArrayDataSource.swift */; };
+		BBBC152F233D61F700467BD4 /* PageLoaderCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1518233D61F600467BD4 /* PageLoaderCollectionViewDelegate.swift */; };
+		BBBC1530233D61F700467BD4 /* CollectionViewBlockDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1519233D61F600467BD4 /* CollectionViewBlockDelegate.swift */; };
+		BBBC1531233D61F700467BD4 /* PageLoaderTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC151A233D61F600467BD4 /* PageLoaderTableViewDelegate.swift */; };
+		BBBC1532233D61F700467BD4 /* TableViewBlockDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC151B233D61F600467BD4 /* TableViewBlockDelegate.swift */; };
+		BBBC1533233D61F700467BD4 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC151D233D61F600467BD4 /* Strings.swift */; };
+		BBBC1534233D61F700467BD4 /* Internationalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC151E233D61F700467BD4 /* Internationalizable.swift */; };
+		BBBC1535233D61F700467BD4 /* ArrayDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1522233D61F700467BD4 /* ArrayDataProvider.swift */; };
+		BBBC1536233D61F700467BD4 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1523233D61F700467BD4 /* DataProvider.swift */; };
+		BBBC1537233D61F700467BD4 /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1524233D61F700467BD4 /* Refreshable.swift */; };
+		BBBC1538233D61F700467BD4 /* ArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1526233D61F700467BD4 /* ArrayDataSource.swift */; };
 		BBD509212337E2E5009CA4EE /* Ness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD509172337E2E4009CA4EE /* Ness.framework */; };
-		BBD509262337E2E5009CA4EE /* NessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD509252337E2E5009CA4EE /* NessTests.swift */; };
 		BBD509282337E2E5009CA4EE /* Ness.h in Headers */ = {isa = PBXBuildFile; fileRef = BBD5091A2337E2E4009CA4EE /* Ness.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -43,12 +60,28 @@
 /* Begin PBXFileReference section */
 		BB58BF4B232E6AD000A13142 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		BB58BF4C232E6AD000A13142 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		BBBC1505233D61F600467BD4 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
+		BBBC1507233D61F600467BD4 /* NSObjectExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtensions.swift; sourceTree = "<group>"; };
+		BBBC150B233D61F600467BD4 /* CoreDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
+		BBBC150D233D61F600467BD4 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		BBBC150F233D61F600467BD4 /* NSManagedObject+Fetch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Fetch.swift"; sourceTree = "<group>"; };
+		BBBC1511233D61F600467BD4 /* AppContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
+		BBBC1515233D61F600467BD4 /* CollectionViewArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewArrayDataSource.swift; sourceTree = "<group>"; };
+		BBBC1516233D61F600467BD4 /* TableViewArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewArrayDataSource.swift; sourceTree = "<group>"; };
+		BBBC1518233D61F600467BD4 /* PageLoaderCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageLoaderCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		BBBC1519233D61F600467BD4 /* CollectionViewBlockDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewBlockDelegate.swift; sourceTree = "<group>"; };
+		BBBC151A233D61F600467BD4 /* PageLoaderTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageLoaderTableViewDelegate.swift; sourceTree = "<group>"; };
+		BBBC151B233D61F600467BD4 /* TableViewBlockDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewBlockDelegate.swift; sourceTree = "<group>"; };
+		BBBC151D233D61F600467BD4 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		BBBC151E233D61F700467BD4 /* Internationalizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Internationalizable.swift; sourceTree = "<group>"; };
+		BBBC1522233D61F700467BD4 /* ArrayDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayDataProvider.swift; sourceTree = "<group>"; };
+		BBBC1523233D61F700467BD4 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		BBBC1524233D61F700467BD4 /* Refreshable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
+		BBBC1526233D61F700467BD4 /* ArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayDataSource.swift; sourceTree = "<group>"; };
 		BBD509172337E2E4009CA4EE /* Ness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD5091A2337E2E4009CA4EE /* Ness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ness.h; sourceTree = "<group>"; };
 		BBD5091B2337E2E4009CA4EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BBD5091C2337E2E4009CA4EE /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
 		BBD509202337E2E5009CA4EE /* NessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BBD509252337E2E5009CA4EE /* NessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NessTests.swift; sourceTree = "<group>"; };
 		BBD509272337E2E5009CA4EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +115,153 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BBBC1504233D61F600467BD4 /* Configurable */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC1505233D61F600467BD4 /* Configurable.swift */,
+			);
+			path = Configurable;
+			sourceTree = "<group>";
+		};
+		BBBC1506233D61F600467BD4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC1507233D61F600467BD4 /* NSObjectExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BBBC1508233D61F600467BD4 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC1509233D61F600467BD4 /* DataSource */,
+				BBBC150C233D61F600467BD4 /* Stack */,
+				BBBC150E233D61F600467BD4 /* Categories */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		BBBC1509233D61F600467BD4 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC150A233D61F600467BD4 /* Providers */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		BBBC150A233D61F600467BD4 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC150B233D61F600467BD4 /* CoreDataProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		BBBC150C233D61F600467BD4 /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC150D233D61F600467BD4 /* CoreDataStack.swift */,
+			);
+			path = Stack;
+			sourceTree = "<group>";
+		};
+		BBBC150E233D61F600467BD4 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC150F233D61F600467BD4 /* NSManagedObject+Fetch.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		BBBC1510233D61F600467BD4 /* AppContext */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC1511233D61F600467BD4 /* AppContext.swift */,
+			);
+			path = AppContext;
+			sourceTree = "<group>";
+		};
+		BBBC1512233D61F600467BD4 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC1513233D61F600467BD4 /* DataSource */,
+				BBBC1517233D61F600467BD4 /* Delegate */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		BBBC1513233D61F600467BD4 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC1514233D61F600467BD4 /* Arrays */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		BBBC1514233D61F600467BD4 /* Arrays */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC1515233D61F600467BD4 /* CollectionViewArrayDataSource.swift */,
+				BBBC1516233D61F600467BD4 /* TableViewArrayDataSource.swift */,
+			);
+			path = Arrays;
+			sourceTree = "<group>";
+		};
+		BBBC1517233D61F600467BD4 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC1518233D61F600467BD4 /* PageLoaderCollectionViewDelegate.swift */,
+				BBBC1519233D61F600467BD4 /* CollectionViewBlockDelegate.swift */,
+				BBBC151A233D61F600467BD4 /* PageLoaderTableViewDelegate.swift */,
+				BBBC151B233D61F600467BD4 /* TableViewBlockDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		BBBC151C233D61F600467BD4 /* Internationalization */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC151D233D61F600467BD4 /* Strings.swift */,
+				BBBC151E233D61F700467BD4 /* Internationalizable.swift */,
+			);
+			path = Internationalization;
+			sourceTree = "<group>";
+		};
+		BBBC151F233D61F700467BD4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC1520233D61F700467BD4 /* DataSource */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BBBC1520233D61F700467BD4 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC1521233D61F700467BD4 /* Providers */,
+				BBBC1525233D61F700467BD4 /* Arrays */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		BBBC1521233D61F700467BD4 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC1522233D61F700467BD4 /* ArrayDataProvider.swift */,
+				BBBC1523233D61F700467BD4 /* DataProvider.swift */,
+				BBBC1524233D61F700467BD4 /* Refreshable.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		BBBC1525233D61F700467BD4 /* Arrays */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC1526233D61F700467BD4 /* ArrayDataSource.swift */,
+			);
+			path = Arrays;
+			sourceTree = "<group>";
+		};
 		BBD5090D2337E2E4009CA4EE = {
 			isa = PBXGroup;
 			children = (
@@ -104,8 +284,14 @@
 		BBD509192337E2E4009CA4EE /* Ness */ = {
 			isa = PBXGroup;
 			children = (
+				BBBC1510233D61F600467BD4 /* AppContext */,
+				BBBC1504233D61F600467BD4 /* Configurable */,
+				BBBC151F233D61F700467BD4 /* Core */,
+				BBBC1508233D61F600467BD4 /* CoreData */,
+				BBBC1506233D61F600467BD4 /* Extensions */,
+				BBBC151C233D61F600467BD4 /* Internationalization */,
+				BBBC1512233D61F600467BD4 /* UIKit */,
 				BBD5091A2337E2E4009CA4EE /* Ness.h */,
-				BBD5091C2337E2E4009CA4EE /* Empty.swift */,
 				BBD5091B2337E2E4009CA4EE /* Info.plist */,
 			);
 			path = Ness;
@@ -114,7 +300,6 @@
 		BBD509242337E2E5009CA4EE /* NessTests */ = {
 			isa = PBXGroup;
 			children = (
-				BBD509252337E2E5009CA4EE /* NessTests.swift */,
 				BBD509272337E2E5009CA4EE /* Info.plist */,
 			);
 			path = NessTests;
@@ -251,6 +436,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBBC1527233D61F700467BD4 /* Configurable.swift in Sources */,
+				BBBC1535233D61F700467BD4 /* ArrayDataProvider.swift in Sources */,
+				BBBC1536233D61F700467BD4 /* DataProvider.swift in Sources */,
+				BBBC152C233D61F700467BD4 /* AppContext.swift in Sources */,
+				BBBC1528233D61F700467BD4 /* NSObjectExtensions.swift in Sources */,
+				BBBC152D233D61F700467BD4 /* CollectionViewArrayDataSource.swift in Sources */,
+				BBBC1529233D61F700467BD4 /* CoreDataProvider.swift in Sources */,
+				BBBC152B233D61F700467BD4 /* NSManagedObject+Fetch.swift in Sources */,
+				BBBC152E233D61F700467BD4 /* TableViewArrayDataSource.swift in Sources */,
+				BBBC1533233D61F700467BD4 /* Strings.swift in Sources */,
+				BBBC1538233D61F700467BD4 /* ArrayDataSource.swift in Sources */,
+				BBBC1537233D61F700467BD4 /* Refreshable.swift in Sources */,
+				BBBC1530233D61F700467BD4 /* CollectionViewBlockDelegate.swift in Sources */,
+				BBBC1532233D61F700467BD4 /* TableViewBlockDelegate.swift in Sources */,
+				BBBC152A233D61F700467BD4 /* CoreDataStack.swift in Sources */,
+				BBBC152F233D61F700467BD4 /* PageLoaderCollectionViewDelegate.swift in Sources */,
+				BBBC1531233D61F700467BD4 /* PageLoaderTableViewDelegate.swift in Sources */,
+				BBBC1534233D61F700467BD4 /* Internationalizable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +461,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBD509262337E2E5009CA4EE /* NessTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +648,7 @@
 		BBD5092F2337E2E5009CA4EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TS43775FV9;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -468,6 +671,7 @@
 		BBD509302337E2E5009CA4EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TS43775FV9;
 				FRAMEWORK_SEARCH_PATHS = (
