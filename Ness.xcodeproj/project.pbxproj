@@ -14,6 +14,10 @@
 		BB19CF9C233D9BF7000BEBA1 /* TestCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CF9B233D9BF7000BEBA1 /* TestCollectionView.swift */; };
 		BB19CF9E233D9CF3000BEBA1 /* NumberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CF9D233D9CF3000BEBA1 /* NumberCollectionViewCell.swift */; };
 		BB19CFA0233D9D2F000BEBA1 /* CollectionViewArrayDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CF9F233D9D2F000BEBA1 /* CollectionViewArrayDataSourceSpec.swift */; };
+		BB19CFA3233DA232000BEBA1 /* CoreDataStackSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CFA2233DA232000BEBA1 /* CoreDataStackSpec.swift */; };
+		BB19CFB2233DA9BE000BEBA1 /* NessTests.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB19CFB0233DA9BE000BEBA1 /* NessTests.xcdatamodeld */; };
+		BB19CFB9233DAAF7000BEBA1 /* TestEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CFB7233DAAF7000BEBA1 /* TestEntity+CoreDataClass.swift */; };
+		BB19CFBA233DAAF7000BEBA1 /* TestEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CFB8233DAAF7000BEBA1 /* TestEntity+CoreDataProperties.swift */; };
 		BB58BF4D232E6AD000A13142 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB58BF4B232E6AD000A13142 /* Quick.framework */; };
 		BB58BF4E232E6AD000A13142 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB58BF4C232E6AD000A13142 /* Nimble.framework */; };
 		BB58BF52232E6BBC00A13142 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BB58BF4C232E6AD000A13142 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -81,6 +85,10 @@
 		BB19CF9B233D9BF7000BEBA1 /* TestCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionView.swift; sourceTree = "<group>"; };
 		BB19CF9D233D9CF3000BEBA1 /* NumberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCollectionViewCell.swift; sourceTree = "<group>"; };
 		BB19CF9F233D9D2F000BEBA1 /* CollectionViewArrayDataSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewArrayDataSourceSpec.swift; sourceTree = "<group>"; };
+		BB19CFA2233DA232000BEBA1 /* CoreDataStackSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackSpec.swift; sourceTree = "<group>"; };
+		BB19CFB1233DA9BE000BEBA1 /* NessTests.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NessTests.xcdatamodel; sourceTree = "<group>"; };
+		BB19CFB7233DAAF7000BEBA1 /* TestEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BB19CFB8233DAAF7000BEBA1 /* TestEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BB58BF4B232E6AD000A13142 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		BB58BF4C232E6AD000A13142 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		BBBC1505233D61F600467BD4 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
@@ -189,6 +197,40 @@
 				BB19CF9D233D9CF3000BEBA1 /* NumberCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		BB19CFA1233DA219000BEBA1 /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				BB19CFA2233DA232000BEBA1 /* CoreDataStackSpec.swift */,
+			);
+			path = Stack;
+			sourceTree = "<group>";
+		};
+		BB19CFA5233DA2A0000BEBA1 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BB19CFB0233DA9BE000BEBA1 /* NessTests.xcdatamodeld */,
+			);
+			name = CoreData;
+			path = Resources/CoreData;
+			sourceTree = "<group>";
+		};
+		BB19CFA9233DA33B000BEBA1 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BB19CFAA233DA350000BEBA1 /* Entities */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		BB19CFAA233DA350000BEBA1 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BB19CFB7233DAAF7000BEBA1 /* TestEntity+CoreDataClass.swift */,
+				BB19CFB8233DAAF7000BEBA1 /* TestEntity+CoreDataProperties.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		BB58BF4A232E6AD000A13142 /* Frameworks */ = {
@@ -350,6 +392,7 @@
 		BBBC1539233D63B400467BD4 /* HelperClasses */ = {
 			isa = PBXGroup;
 			children = (
+				BB19CFA9233DA33B000BEBA1 /* CoreData */,
 				BBBC153A233D63B400467BD4 /* Internationalization */,
 				BBBC1577233D6EFF00467BD4 /* Providers */,
 				BB19CF94233D9A40000BEBA1 /* UIKit */,
@@ -378,6 +421,7 @@
 		BBBC1554233D654300467BD4 /* TestResources */ = {
 			isa = PBXGroup;
 			children = (
+				BB19CFA5233DA2A0000BEBA1 /* CoreData */,
 				BBBC1555233D654300467BD4 /* StringsSpec.strings */,
 			);
 			path = TestResources;
@@ -443,6 +487,7 @@
 		BBBC1585233D706300467BD4 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				BB19CFA1233DA219000BEBA1 /* Stack */,
 				BBBC1586233D706C00467BD4 /* Providers */,
 			);
 			path = CoreData;
@@ -667,6 +712,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB19CFA0233D9D2F000BEBA1 /* CollectionViewArrayDataSourceSpec.swift in Sources */,
+				BB19CFB9233DAAF7000BEBA1 /* TestEntity+CoreDataClass.swift in Sources */,
 				BB19CF8F233D951A000BEBA1 /* AppContextSpec.swift in Sources */,
 				BBBC1579233D6F0000467BD4 /* RefreshableDataProvider.swift in Sources */,
 				BBBC1574233D6E6500467BD4 /* ArrayDataSourceSpec.swift in Sources */,
@@ -677,8 +723,11 @@
 				BBBC1576233D6E9700467BD4 /* ArrayDataProviderSpec.swift in Sources */,
 				BBBC153E233D63B400467BD4 /* TestClass.swift in Sources */,
 				BBBC156F233D6D7C00467BD4 /* NSObject+ExtensionsSpec.swift in Sources */,
+				BB19CFB2233DA9BE000BEBA1 /* NessTests.xcdatamodeld in Sources */,
 				BB19CF98233D9AC8000BEBA1 /* NumberTableViewCell.swift in Sources */,
+				BB19CFA3233DA232000BEBA1 /* CoreDataStackSpec.swift in Sources */,
 				BB19CF9C233D9BF7000BEBA1 /* TestCollectionView.swift in Sources */,
+				BB19CFBA233DAAF7000BEBA1 /* TestEntity+CoreDataProperties.swift in Sources */,
 				BB19CF93233D99F1000BEBA1 /* TableViewArrayDataSourceSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -961,6 +1010,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BB19CFB0233DA9BE000BEBA1 /* NessTests.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BB19CFB1233DA9BE000BEBA1 /* NessTests.xcdatamodel */,
+			);
+			currentVersion = BB19CFB1233DA9BE000BEBA1 /* NessTests.xcdatamodel */;
+			path = NessTests.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BBD5090E2337E2E4009CA4EE /* Project object */;
 }

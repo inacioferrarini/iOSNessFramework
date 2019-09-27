@@ -22,15 +22,27 @@
 //
 
 import Foundation
-import Ness
+import CoreData
 
-class TestClass {
-}
+@objc(TestEntity)
+public class TestEntity: NSManagedObject {
 
-extension TestClass: Internationalizable {
+    open class func testEntity(with name: String?, group: String?, in context: NSManagedObjectContext) -> TestEntity? {
+        let newTestEntity = NSEntityDescription.insertNewObject(forEntityName: self.simpleClassName(), into: context) as? TestEntity
+        if let entity = newTestEntity {
+            entity.name = name
+            entity.group = group
+        }
+        return newTestEntity
+    }
 
-    var titleString: String {
-        return string("str1", languageCode: "en-US")
+    open class func removeAll(in context: NSManagedObjectContext) {
+        let request: NSFetchRequest = NSFetchRequest<TestEntity>(entityName: self.simpleClassName())
+        if let searchResults = try? context.fetch(request) {
+            for entity in searchResults {
+                context.delete(entity)
+            }
+        }
     }
     
 }

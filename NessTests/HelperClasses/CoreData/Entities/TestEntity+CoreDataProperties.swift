@@ -22,15 +22,15 @@
 //
 
 import Foundation
-import Ness
+import CoreData
 
-class TestClass {
-}
+extension TestEntity {
 
-extension TestClass: Internationalizable {
-
-    var titleString: String {
-        return string("str1", languageCode: "en-US")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<TestEntity> {
+        return NSFetchRequest<TestEntity>(entityName: "TestEntity")
     }
-    
+
+    @NSManaged public var group: String?
+    @NSManaged public var name: String?
+
 }
