@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB19CF8F233D951A000BEBA1 /* AppContextSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CF8E233D951A000BEBA1 /* AppContextSpec.swift */; };
+		BB19CF93233D99F1000BEBA1 /* TableViewArrayDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CF92233D99F1000BEBA1 /* TableViewArrayDataSourceSpec.swift */; };
+		BB19CF96233D9A5B000BEBA1 /* TestTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CF95233D9A5B000BEBA1 /* TestTableView.swift */; };
+		BB19CF98233D9AC8000BEBA1 /* NumberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CF97233D9AC8000BEBA1 /* NumberTableViewCell.swift */; };
+		BB19CF9C233D9BF7000BEBA1 /* TestCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CF9B233D9BF7000BEBA1 /* TestCollectionView.swift */; };
+		BB19CF9E233D9CF3000BEBA1 /* NumberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CF9D233D9CF3000BEBA1 /* NumberCollectionViewCell.swift */; };
+		BB19CFA0233D9D2F000BEBA1 /* CollectionViewArrayDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CF9F233D9D2F000BEBA1 /* CollectionViewArrayDataSourceSpec.swift */; };
 		BB58BF4D232E6AD000A13142 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB58BF4B232E6AD000A13142 /* Quick.framework */; };
 		BB58BF4E232E6AD000A13142 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB58BF4C232E6AD000A13142 /* Nimble.framework */; };
 		BB58BF52232E6BBC00A13142 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BB58BF4C232E6AD000A13142 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -67,6 +74,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BB19CF8E233D951A000BEBA1 /* AppContextSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContextSpec.swift; sourceTree = "<group>"; };
+		BB19CF92233D99F1000BEBA1 /* TableViewArrayDataSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewArrayDataSourceSpec.swift; sourceTree = "<group>"; };
+		BB19CF95233D9A5B000BEBA1 /* TestTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableView.swift; sourceTree = "<group>"; };
+		BB19CF97233D9AC8000BEBA1 /* NumberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTableViewCell.swift; sourceTree = "<group>"; };
+		BB19CF9B233D9BF7000BEBA1 /* TestCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionView.swift; sourceTree = "<group>"; };
+		BB19CF9D233D9CF3000BEBA1 /* NumberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCollectionViewCell.swift; sourceTree = "<group>"; };
+		BB19CF9F233D9D2F000BEBA1 /* CollectionViewArrayDataSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewArrayDataSourceSpec.swift; sourceTree = "<group>"; };
 		BB58BF4B232E6AD000A13142 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		BB58BF4C232E6AD000A13142 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		BBBC1505233D61F600467BD4 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
@@ -125,6 +139,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB19CF8D233D9506000BEBA1 /* AppContext */ = {
+			isa = PBXGroup;
+			children = (
+				BB19CF8E233D951A000BEBA1 /* AppContextSpec.swift */,
+			);
+			path = AppContext;
+			sourceTree = "<group>";
+		};
+		BB19CF90233D99C0000BEBA1 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				BB19CF91233D99D3000BEBA1 /* Arrays */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		BB19CF91233D99D3000BEBA1 /* Arrays */ = {
+			isa = PBXGroup;
+			children = (
+				BB19CF92233D99F1000BEBA1 /* TableViewArrayDataSourceSpec.swift */,
+				BB19CF9F233D9D2F000BEBA1 /* CollectionViewArrayDataSourceSpec.swift */,
+			);
+			path = Arrays;
+			sourceTree = "<group>";
+		};
+		BB19CF94233D9A40000BEBA1 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				BB19CF9A233D9BD1000BEBA1 /* Cells */,
+				BB19CF99233D9BCB000BEBA1 /* Views */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		BB19CF99233D9BCB000BEBA1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB19CF9B233D9BF7000BEBA1 /* TestCollectionView.swift */,
+				BB19CF95233D9A5B000BEBA1 /* TestTableView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BB19CF9A233D9BD1000BEBA1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BB19CF97233D9AC8000BEBA1 /* NumberTableViewCell.swift */,
+				BB19CF9D233D9CF3000BEBA1 /* NumberCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		BB58BF4A232E6AD000A13142 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +352,7 @@
 			children = (
 				BBBC153A233D63B400467BD4 /* Internationalization */,
 				BBBC1577233D6EFF00467BD4 /* Providers */,
+				BB19CF94233D9A40000BEBA1 /* UIKit */,
 			);
 			path = HelperClasses;
 			sourceTree = "<group>";
@@ -368,6 +435,7 @@
 		BBBC157A233D6FB000467BD4 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				BB19CF90233D99C0000BEBA1 /* DataSource */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -427,6 +495,7 @@
 			children = (
 				BBBC1554233D654300467BD4 /* TestResources */,
 				BBBC1539233D63B400467BD4 /* HelperClasses */,
+				BB19CF8D233D9506000BEBA1 /* AppContext */,
 				BBBC156C233D6D3800467BD4 /* Core */,
 				BBBC1585233D706300467BD4 /* CoreData */,
 				BBBC156D233D6D5D00467BD4 /* Extensions */,
@@ -597,13 +666,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB19CFA0233D9D2F000BEBA1 /* CollectionViewArrayDataSourceSpec.swift in Sources */,
+				BB19CF8F233D951A000BEBA1 /* AppContextSpec.swift in Sources */,
 				BBBC1579233D6F0000467BD4 /* RefreshableDataProvider.swift in Sources */,
 				BBBC1574233D6E6500467BD4 /* ArrayDataSourceSpec.swift in Sources */,
+				BB19CF9E233D9CF3000BEBA1 /* NumberCollectionViewCell.swift in Sources */,
 				BBBC1552233D652800467BD4 /* InternationalizableSpec.swift in Sources */,
 				BBBC1553233D652800467BD4 /* StringsSpec.swift in Sources */,
+				BB19CF96233D9A5B000BEBA1 /* TestTableView.swift in Sources */,
 				BBBC1576233D6E9700467BD4 /* ArrayDataProviderSpec.swift in Sources */,
 				BBBC153E233D63B400467BD4 /* TestClass.swift in Sources */,
 				BBBC156F233D6D7C00467BD4 /* NSObject+ExtensionsSpec.swift in Sources */,
+				BB19CF98233D9AC8000BEBA1 /* NumberTableViewCell.swift in Sources */,
+				BB19CF9C233D9BF7000BEBA1 /* TestCollectionView.swift in Sources */,
+				BB19CF93233D99F1000BEBA1 /* TableViewArrayDataSourceSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

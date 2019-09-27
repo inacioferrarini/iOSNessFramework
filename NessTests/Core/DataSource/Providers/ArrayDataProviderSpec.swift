@@ -28,8 +28,6 @@ import Nimble
 
 class ArrayDataProviderSpec: QuickSpec {
 
-    // swiftlint:disable function_body_length
-
     override func spec() {
 
         describe("Array Data Provider") {
@@ -175,7 +173,5 @@ class ArrayDataProviderSpec: QuickSpec {
         }
 
     }
-
-    // swiftlint:enable body_length
 
 }
