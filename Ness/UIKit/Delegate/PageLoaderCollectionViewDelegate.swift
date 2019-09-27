@@ -75,14 +75,12 @@ open class PageLoaderCollectionViewDelegate<CellType: UICollectionViewCell, Type
     ///
     /// - parameter scrollView: Where the scrolling slowed.
     ///
-    public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if !decelerate {
-            if self.shouldLoadNextPage() {
-                let endScrolling = scrollView.contentOffset.y + scrollView.frame.size.height
-                if endScrolling >= scrollView.contentSize.height {
-                    DispatchQueue.main.async { [weak self] in
-                        self?.loadNextPage()
-                    }
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if self.shouldLoadNextPage() {
+            let endScrolling = scrollView.contentOffset.y + scrollView.frame.size.height
+            if endScrolling >= scrollView.contentSize.height {
+                DispatchQueue.main.async { [weak self] in
+                    self?.loadNextPage()
                 }
             }
         }

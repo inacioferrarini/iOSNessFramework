@@ -20,6 +20,10 @@
 		BB19CFBA233DAAF7000BEBA1 /* TestEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CFB8233DAAF7000BEBA1 /* TestEntity+CoreDataProperties.swift */; };
 		BB19CFBE233DAE31000BEBA1 /* NSManagedObject+FetchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CFBD233DAE31000BEBA1 /* NSManagedObject+FetchSpec.swift */; };
 		BB19CFC0233DAECE000BEBA1 /* CoreDataProviderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CFBF233DAECE000BEBA1 /* CoreDataProviderSpec.swift */; };
+		BB19CFC3233DB050000BEBA1 /* TableViewBlockDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CFC2233DB050000BEBA1 /* TableViewBlockDelegateSpec.swift */; };
+		BB19CFC5233DB1F4000BEBA1 /* CollectionViewBlockDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CFC4233DB1F4000BEBA1 /* CollectionViewBlockDelegateSpec.swift */; };
+		BB19CFC7233DB347000BEBA1 /* PageLoaderTableViewDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CFC6233DB347000BEBA1 /* PageLoaderTableViewDelegateSpec.swift */; };
+		BB19CFC9233DB38C000BEBA1 /* PageLoaderCollectionViewDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CFC8233DB38C000BEBA1 /* PageLoaderCollectionViewDelegateSpec.swift */; };
 		BB58BF4D232E6AD000A13142 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB58BF4B232E6AD000A13142 /* Quick.framework */; };
 		BB58BF4E232E6AD000A13142 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB58BF4C232E6AD000A13142 /* Nimble.framework */; };
 		BB58BF52232E6BBC00A13142 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BB58BF4C232E6AD000A13142 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -93,6 +97,10 @@
 		BB19CFB8233DAAF7000BEBA1 /* TestEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BB19CFBD233DAE31000BEBA1 /* NSManagedObject+FetchSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+FetchSpec.swift"; sourceTree = "<group>"; };
 		BB19CFBF233DAECE000BEBA1 /* CoreDataProviderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProviderSpec.swift; sourceTree = "<group>"; };
+		BB19CFC2233DB050000BEBA1 /* TableViewBlockDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewBlockDelegateSpec.swift; sourceTree = "<group>"; };
+		BB19CFC4233DB1F4000BEBA1 /* CollectionViewBlockDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBlockDelegateSpec.swift; sourceTree = "<group>"; };
+		BB19CFC6233DB347000BEBA1 /* PageLoaderTableViewDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageLoaderTableViewDelegateSpec.swift; sourceTree = "<group>"; };
+		BB19CFC8233DB38C000BEBA1 /* PageLoaderCollectionViewDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageLoaderCollectionViewDelegateSpec.swift; sourceTree = "<group>"; };
 		BB58BF4B232E6AD000A13142 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		BB58BF4C232E6AD000A13142 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		BBBC1505233D61F600467BD4 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
@@ -251,6 +259,17 @@
 				BBBC1586233D706C00467BD4 /* Providers */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		BB19CFC1233DB03E000BEBA1 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				BB19CFC4233DB1F4000BEBA1 /* CollectionViewBlockDelegateSpec.swift */,
+				BB19CFC6233DB347000BEBA1 /* PageLoaderTableViewDelegateSpec.swift */,
+				BB19CFC8233DB38C000BEBA1 /* PageLoaderCollectionViewDelegateSpec.swift */,
+				BB19CFC2233DB050000BEBA1 /* TableViewBlockDelegateSpec.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		BB58BF4A232E6AD000A13142 /* Frameworks */ = {
@@ -500,6 +519,7 @@
 			isa = PBXGroup;
 			children = (
 				BB19CF90233D99C0000BEBA1 /* DataSource */,
+				BB19CFC1233DB03E000BEBA1 /* Delegate */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -747,11 +767,15 @@
 				BBBC156F233D6D7C00467BD4 /* NSObject+ExtensionsSpec.swift in Sources */,
 				BB19CFB2233DA9BE000BEBA1 /* NessTests.xcdatamodeld in Sources */,
 				BB19CF98233D9AC8000BEBA1 /* NumberTableViewCell.swift in Sources */,
+				BB19CFC5233DB1F4000BEBA1 /* CollectionViewBlockDelegateSpec.swift in Sources */,
 				BB19CFC0233DAECE000BEBA1 /* CoreDataProviderSpec.swift in Sources */,
 				BB19CFA3233DA232000BEBA1 /* CoreDataStackSpec.swift in Sources */,
+				BB19CFC7233DB347000BEBA1 /* PageLoaderTableViewDelegateSpec.swift in Sources */,
 				BB19CFBE233DAE31000BEBA1 /* NSManagedObject+FetchSpec.swift in Sources */,
 				BB19CF9C233D9BF7000BEBA1 /* TestCollectionView.swift in Sources */,
 				BB19CFBA233DAAF7000BEBA1 /* TestEntity+CoreDataProperties.swift in Sources */,
+				BB19CFC3233DB050000BEBA1 /* TableViewBlockDelegateSpec.swift in Sources */,
+				BB19CFC9233DB38C000BEBA1 /* PageLoaderCollectionViewDelegateSpec.swift in Sources */,
 				BB19CF93233D99F1000BEBA1 /* TableViewArrayDataSourceSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
