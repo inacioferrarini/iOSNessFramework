@@ -18,6 +18,7 @@
 		BB19CFB2233DA9BE000BEBA1 /* NessTests.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB19CFB0233DA9BE000BEBA1 /* NessTests.xcdatamodeld */; };
 		BB19CFB9233DAAF7000BEBA1 /* TestEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CFB7233DAAF7000BEBA1 /* TestEntity+CoreDataClass.swift */; };
 		BB19CFBA233DAAF7000BEBA1 /* TestEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CFB8233DAAF7000BEBA1 /* TestEntity+CoreDataProperties.swift */; };
+		BB19CFBE233DAE31000BEBA1 /* NSManagedObject+FetchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CFBD233DAE31000BEBA1 /* NSManagedObject+FetchSpec.swift */; };
 		BB58BF4D232E6AD000A13142 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB58BF4B232E6AD000A13142 /* Quick.framework */; };
 		BB58BF4E232E6AD000A13142 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB58BF4C232E6AD000A13142 /* Nimble.framework */; };
 		BB58BF52232E6BBC00A13142 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BB58BF4C232E6AD000A13142 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -89,6 +90,7 @@
 		BB19CFB1233DA9BE000BEBA1 /* NessTests.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NessTests.xcdatamodel; sourceTree = "<group>"; };
 		BB19CFB7233DAAF7000BEBA1 /* TestEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BB19CFB8233DAAF7000BEBA1 /* TestEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BB19CFBD233DAE31000BEBA1 /* NSManagedObject+FetchSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+FetchSpec.swift"; sourceTree = "<group>"; };
 		BB58BF4B232E6AD000A13142 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		BB58BF4C232E6AD000A13142 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		BBBC1505233D61F600467BD4 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
@@ -231,6 +233,22 @@
 				BB19CFB8233DAAF7000BEBA1 /* TestEntity+CoreDataProperties.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		BB19CFBB233DADF1000BEBA1 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				BB19CFBD233DAE31000BEBA1 /* NSManagedObject+FetchSpec.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		BB19CFBC233DAE15000BEBA1 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				BBBC1586233D706C00467BD4 /* Providers */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		BB58BF4A232E6AD000A13142 /* Frameworks */ = {
@@ -487,8 +505,9 @@
 		BBBC1585233D706300467BD4 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				BB19CFBC233DAE15000BEBA1 /* DataSource */,
 				BB19CFA1233DA219000BEBA1 /* Stack */,
-				BBBC1586233D706C00467BD4 /* Providers */,
+				BB19CFBB233DADF1000BEBA1 /* Categories */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -726,6 +745,7 @@
 				BB19CFB2233DA9BE000BEBA1 /* NessTests.xcdatamodeld in Sources */,
 				BB19CF98233D9AC8000BEBA1 /* NumberTableViewCell.swift in Sources */,
 				BB19CFA3233DA232000BEBA1 /* CoreDataStackSpec.swift in Sources */,
+				BB19CFBE233DAE31000BEBA1 /* NSManagedObject+FetchSpec.swift in Sources */,
 				BB19CF9C233D9BF7000BEBA1 /* TestCollectionView.swift in Sources */,
 				BB19CFBA233DAAF7000BEBA1 /* TestEntity+CoreDataProperties.swift in Sources */,
 				BB19CF93233D99F1000BEBA1 /* TableViewArrayDataSourceSpec.swift in Sources */,
