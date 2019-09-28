@@ -1,6 +1,6 @@
 //    The MIT License (MIT)
 //
-//    Copyright (c) 2017 Inácio Ferrarini
+//    Copyright (c) 2019 Inácio Ferrarini
 //
 //    Permission is hereby granted, free of charge, to any person obtaining a copy
 //    of this software and associated documentation files (the "Software"), to deal
@@ -28,7 +28,6 @@ import CoreData
 ///
 open class CoreDataStack {
 
-
     // MARK: - Properties
 
     ///
@@ -45,7 +44,6 @@ open class CoreDataStack {
     /// Bundle where the model is located.
     ///
     public let bundle: Bundle?
-
 
     // MARK: - Initialization
 
@@ -74,7 +72,6 @@ open class CoreDataStack {
         self.databaseFileName = databaseFileName
         self.bundle = bundle
     }
-
 
     // MARK: - Lazy Helper Properties
 
@@ -113,7 +110,6 @@ open class CoreDataStack {
         managedObjectContext.persistentStoreCoordinator = coordinator
         return managedObjectContext
     }()
-
 
     // MARK: - Core Data Saving support
 

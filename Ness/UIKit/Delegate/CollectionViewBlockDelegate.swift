@@ -1,6 +1,6 @@
 //    The MIT License (MIT)
 //
-//    Copyright (c) 2017 Inácio Ferrarini
+//    Copyright (c) 2019 Inácio Ferrarini
 //
 //    Permission is hereby granted, free of charge, to any person obtaining a copy
 //    of this software and associated documentation files (the "Software"), to deal
@@ -29,7 +29,6 @@ import UIKit
 open class CollectionViewBlockDelegate<CellType: UICollectionViewCell, Type: Equatable>: NSObject, UICollectionViewDelegate
     where CellType: Configurable {
 
-
     // MARK: - Properties
 
     ///
@@ -41,7 +40,6 @@ open class CollectionViewBlockDelegate<CellType: UICollectionViewCell, Type: Equ
     /// When an item is selected, its related model will be supplied.
     ///
     let onSelected: ((Type) -> Void)
-
 
     // MARK: - Initialization
 
@@ -58,7 +56,6 @@ open class CollectionViewBlockDelegate<CellType: UICollectionViewCell, Type: Equ
         self.onSelected = onSelected
         super.init()
     }
-
 
     // MARK: - Row Selection
 

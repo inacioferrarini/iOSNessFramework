@@ -1,6 +1,6 @@
 //    The MIT License (MIT)
 //
-//    Copyright (c) 2017 Inácio Ferrarini
+//    Copyright (c) 2019 Inácio Ferrarini
 //
 //    Permission is hereby granted, free of charge, to any person obtaining a copy
 //    of this software and associated documentation files (the "Software"), to deal
@@ -28,7 +28,6 @@ import UIKit
 ///
 open class ArrayDataSource<Type: Equatable>: NSObject {
 
-
     // MARK: - Properties
 
     ///
@@ -42,7 +41,6 @@ open class ArrayDataSource<Type: Equatable>: NSObject {
     ///
     open var onRefresh: (() -> Void)?
 
-
     // MARK: - Initialization
 
     ///
@@ -53,7 +51,6 @@ open class ArrayDataSource<Type: Equatable>: NSObject {
     public init(with dataProvider: ArrayDataProvider<Type>) {
         self.dataProvider = dataProvider
     }
-
 
     // MARK: - Public Methods
 

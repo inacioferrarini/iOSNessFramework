@@ -1,6 +1,6 @@
 //    The MIT License (MIT)
 //
-//    Copyright (c) 2017 Inácio Ferrarini
+//    Copyright (c) 2019 Inácio Ferrarini
 //
 //    Permission is hereby granted, free of charge, to any person obtaining a copy
 //    of this software and associated documentation files (the "Software"), to deal
@@ -30,7 +30,6 @@ import UIKit
 open class PageLoaderTableViewDelegate<CellType: UITableViewCell, Type: Equatable>: TableViewBlockDelegate<CellType, Type>
     where CellType: Configurable {
 
-
     // MARK: - Properties
 
     ///
@@ -42,7 +41,6 @@ open class PageLoaderTableViewDelegate<CellType: UITableViewCell, Type: Equatabl
     /// Loads the next page
     ///
     let loadNextPage: (() -> Void)
-
 
     // MARK: - Initialization
 
@@ -66,7 +64,6 @@ open class PageLoaderTableViewDelegate<CellType: UITableViewCell, Type: Equatabl
         super.init(with: dataSource,
                    onSelected: onSelected)
     }
-
 
     // MARK: - Pagination
 

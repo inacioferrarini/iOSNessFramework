@@ -1,6 +1,6 @@
 //    The MIT License (MIT)
 //
-//    Copyright (c) 2017 Inácio Ferrarini
+//    Copyright (c) 2019 Inácio Ferrarini
 //
 //    Permission is hereby granted, free of charge, to any person obtaining a copy
 //    of this software and associated documentation files (the "Software"), to deal
@@ -28,7 +28,6 @@ import CoreData
 /// A `Core Data` `DataProvider` having NSManagedObjects of type `EntityType`.
 ///
 open class CoreDataProvider<EntityType: NSManagedObject>: ArrayDataProvider<EntityType>, NSFetchedResultsControllerDelegate, Refreshable {
-
 
     // MARK: - Properties
 
@@ -88,7 +87,6 @@ open class CoreDataProvider<EntityType: NSManagedObject>: ArrayDataProvider<Enti
         return EntityType.simpleClassName()
     }()
 
-
     // MARK: - Initialization
 
     ///
@@ -146,7 +144,6 @@ open class CoreDataProvider<EntityType: NSManagedObject>: ArrayDataProvider<Enti
 		super.init(sections: [[]], titles: nil)
     }
 
-
     // MARK: - Public Methods
 
     ///
@@ -176,7 +173,6 @@ open class CoreDataProvider<EntityType: NSManagedObject>: ArrayDataProvider<Enti
     open func refresh() throws {
         try self.fetchedResultsController.performFetch()
     }
-
 
     // MARK: - Fetched results controller
 
@@ -228,7 +224,6 @@ open class CoreDataProvider<EntityType: NSManagedObject>: ArrayDataProvider<Enti
                                           sectionNameKeyPath: self.sectionNameKeyPath,
                                           cacheName: self.cacheName)
     }
-
 
     // MARK: - Data Provider Implementation
 
