@@ -79,6 +79,7 @@
 		BBEBC530234068F80020CC25 /* OHHTTPStubs.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBEBC52E234068DC0020CC25 /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BBEBC53523406ECE0020CC25 /* PersonRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBC53423406ECE0020CC25 /* PersonRequest.swift */; };
 		BBEBC53723406ED90020CC25 /* PersonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBC53623406ED90020CC25 /* PersonResponse.swift */; };
+		BBEBC54E234103150020CC25 /* EmptyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBC54D234103150020CC25 /* EmptyRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +182,7 @@
 		BBEBC5312340692E0020CC25 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/TestClass.strings"; sourceTree = "<group>"; };
 		BBEBC53423406ECE0020CC25 /* PersonRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRequest.swift; sourceTree = "<group>"; };
 		BBEBC53623406ED90020CC25 /* PersonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonResponse.swift; sourceTree = "<group>"; };
+		BBEBC54D234103150020CC25 /* EmptyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -691,6 +693,7 @@
 			isa = PBXGroup;
 			children = (
 				BBEBC51C23403EAC0020CC25 /* AppBaseApi.swift */,
+				BBEBC54D234103150020CC25 /* EmptyRequest.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -877,6 +880,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBBC1527233D61F700467BD4 /* Configurable.swift in Sources */,
+				BBEBC54E234103150020CC25 /* EmptyRequest.swift in Sources */,
 				BBBC1535233D61F700467BD4 /* ArrayDataProvider.swift in Sources */,
 				BBBC1536233D61F700467BD4 /* DataProvider.swift in Sources */,
 				BBBC152C233D61F700467BD4 /* AppContext.swift in Sources */,

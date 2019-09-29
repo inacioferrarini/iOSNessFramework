@@ -78,21 +78,294 @@ open class AppBaseApi {
 
     // MARK: - Http Verbs
 
-    public func get<RequestType, ResponseType>(
+    /// Performs a `get` request without body.
+    ///
+    /// - Parameters:
+    ///
+    /// - parameter targetUrl: The request path.
+    ///
+    /// - parameter headers: Http Headers to be sent with the request.
+    ///
+    /// - parameter success: The block to be called if request succeeds.
+    ///
+    /// - parameter failure: The block to be called if request fails.
+    ///
+    /// - parameter retryAttempts: How many tries before calling `errorHandler` block.
+    ///
+    public func get<ResponseType>(
         targetUrl: String,
-        requestObject: RequestType? = nil,
         headers: [String: String]? = nil,
-        success: @escaping ((ResponseType) -> Void),
+        success: @escaping ((ResponseType?) -> Void),
         failure: @escaping ((Error) -> Void),
-        retryAttempts: Int) where RequestType: Encodable, ResponseType: Decodable {
+        retryAttempts: Int) where ResponseType: Decodable {
 
             executeRequest(httpMethod: .get,
                            targetUrl: targetUrl,
-                           requestObject: requestObject,
+                           requestObject: EmptyRequest(),
                            headers: headers,
                            success: success,
                            failure: failure,
                            retryAttempts: retryAttempts)
+
+    }
+
+    /// Performs a `post` request without body.
+    ///
+    /// - Parameters:
+    ///
+    /// - parameter targetUrl: The request path.
+    ///
+    /// - parameter headers: Http Headers to be sent with the request.
+    ///
+    /// - parameter success: The block to be called if request succeeds.
+    ///
+    /// - parameter failure: The block to be called if request fails.
+    ///
+    /// - parameter retryAttempts: How many tries before calling `errorHandler` block.
+    ///
+    public func post<ResponseType>(
+        targetUrl: String,
+        headers: [String: String]? = nil,
+        success: @escaping ((ResponseType?) -> Void),
+        failure: @escaping ((Error) -> Void),
+        retryAttempts: Int) where ResponseType: Decodable {
+
+        executeRequest(httpMethod: .post,
+                       targetUrl: targetUrl,
+                       requestObject: EmptyRequest(),
+                       headers: headers,
+                       success: success,
+                       failure: failure,
+                       retryAttempts: retryAttempts)
+
+    }
+
+    /// Performs a `post` request with `requestObject` as body.
+    ///
+    /// - Parameters:
+    ///
+    /// - parameter targetUrl: The request path.
+    ///
+    /// - requestObject: body data to be sent with the request
+    ///
+    /// - parameter headers: Http Headers to be sent with the request.
+    ///
+    /// - parameter success: The block to be called if request succeeds.
+    ///
+    /// - parameter failure: The block to be called if request fails.
+    ///
+    /// - parameter retryAttempts: How many tries before calling `errorHandler` block.
+    ///
+    public func post<RequestType, ResponseType>(
+        targetUrl: String,
+        requestObject: RequestType,
+        headers: [String: String]? = nil,
+        success: @escaping ((ResponseType?) -> Void),
+        failure: @escaping ((Error) -> Void),
+        retryAttempts: Int) where RequestType: Encodable, ResponseType: Decodable {
+
+        executeRequest(httpMethod: .post,
+                       targetUrl: targetUrl,
+                       requestObject: requestObject,
+                       headers: headers,
+                       success: success,
+                       failure: failure,
+                       retryAttempts: retryAttempts)
+
+    }
+
+    /// Performs a `put` request without body.
+    ///
+    /// - Parameters:
+    ///
+    /// - parameter targetUrl: The request path.
+    ///
+    /// - parameter headers: Http Headers to be sent with the request.
+    ///
+    /// - parameter success: The block to be called if request succeeds.
+    ///
+    /// - parameter failure: The block to be called if request fails.
+    ///
+    /// - parameter retryAttempts: How many tries before calling `errorHandler` block.
+    ///
+    public func put<ResponseType>(
+        targetUrl: String,
+        headers: [String: String]? = nil,
+        success: @escaping ((ResponseType?) -> Void),
+        failure: @escaping ((Error) -> Void),
+        retryAttempts: Int) where ResponseType: Decodable {
+
+        executeRequest(httpMethod: .put,
+                       targetUrl: targetUrl,
+                       requestObject: EmptyRequest(),
+                       headers: headers,
+                       success: success,
+                       failure: failure,
+                       retryAttempts: retryAttempts)
+
+    }
+
+    /// Performs a `put` request with `requestObject` as body.
+    ///
+    /// - Parameters:
+    ///
+    /// - parameter targetUrl: The request path.
+    ///
+    /// - requestObject: body data to be sent with the request
+    ///
+    /// - parameter headers: Http Headers to be sent with the request.
+    ///
+    /// - parameter success: The block to be called if request succeeds.
+    ///
+    /// - parameter failure: The block to be called if request fails.
+    ///
+    /// - parameter retryAttempts: How many tries before calling `errorHandler` block.
+    ///
+    public func put<RequestType, ResponseType>(
+        targetUrl: String,
+        requestObject: RequestType,
+        headers: [String: String]? = nil,
+        success: @escaping ((ResponseType?) -> Void),
+        failure: @escaping ((Error) -> Void),
+        retryAttempts: Int) where RequestType: Encodable, ResponseType: Decodable {
+
+        executeRequest(httpMethod: .put,
+                       targetUrl: targetUrl,
+                       requestObject: requestObject,
+                       headers: headers,
+                       success: success,
+                       failure: failure,
+                       retryAttempts: retryAttempts)
+
+    }
+
+    /// Performs a `patch` request without body.
+    ///
+    /// - Parameters:
+    ///
+    /// - parameter targetUrl: The request path.
+    ///
+    /// - parameter headers: Http Headers to be sent with the request.
+    ///
+    /// - parameter success: The block to be called if request succeeds.
+    ///
+    /// - parameter failure: The block to be called if request fails.
+    ///
+    /// - parameter retryAttempts: How many tries before calling `errorHandler` block.
+    ///
+    public func patch<ResponseType>(
+        targetUrl: String,
+        headers: [String: String]? = nil,
+        success: @escaping ((ResponseType?) -> Void),
+        failure: @escaping ((Error) -> Void),
+        retryAttempts: Int) where ResponseType: Decodable {
+
+        executeRequest(httpMethod: .patch,
+                       targetUrl: targetUrl,
+                       requestObject: EmptyRequest(),
+                       headers: headers,
+                       success: success,
+                       failure: failure,
+                       retryAttempts: retryAttempts)
+
+    }
+
+    /// Performs a `patch` request with `requestObject` as body.
+    ///
+    /// - Parameters:
+    ///
+    /// - parameter targetUrl: The request path.
+    ///
+    /// - requestObject: body data to be sent with the request
+    ///
+    /// - parameter headers: Http Headers to be sent with the request.
+    ///
+    /// - parameter success: The block to be called if request succeeds.
+    ///
+    /// - parameter failure: The block to be called if request fails.
+    ///
+    /// - parameter retryAttempts: How many tries before calling `errorHandler` block.
+    ///
+    public func path<RequestType, ResponseType>(
+        targetUrl: String,
+        requestObject: RequestType,
+        headers: [String: String]? = nil,
+        success: @escaping ((ResponseType?) -> Void),
+        failure: @escaping ((Error) -> Void),
+        retryAttempts: Int) where RequestType: Encodable, ResponseType: Decodable {
+
+        executeRequest(httpMethod: .patch,
+                       targetUrl: targetUrl,
+                       requestObject: requestObject,
+                       headers: headers,
+                       success: success,
+                       failure: failure,
+                       retryAttempts: retryAttempts)
+
+    }
+
+    /// Performs a `delete` request without body.
+    ///
+    /// - Parameters:
+    ///
+    /// - parameter targetUrl: The request path.
+    ///
+    /// - parameter headers: Http Headers to be sent with the request.
+    ///
+    /// - parameter success: The block to be called if request succeeds.
+    ///
+    /// - parameter failure: The block to be called if request fails.
+    ///
+    /// - parameter retryAttempts: How many tries before calling `errorHandler` block.
+    ///
+    public func delete<ResponseType>(
+        targetUrl: String,
+        headers: [String: String]? = nil,
+        success: @escaping ((ResponseType?) -> Void),
+        failure: @escaping ((Error) -> Void),
+        retryAttempts: Int) where ResponseType: Decodable {
+
+        executeRequest(httpMethod: .delete,
+                       targetUrl: targetUrl,
+                       requestObject: EmptyRequest(),
+                       headers: headers,
+                       success: success,
+                       failure: failure,
+                       retryAttempts: retryAttempts)
+
+    }
+
+    /// Performs a `delete` request with `requestObject` as body.
+    ///
+    /// - Parameters:
+    ///
+    /// - parameter targetUrl: The request path.
+    ///
+    /// - requestObject: body data to be sent with the request
+    ///
+    /// - parameter headers: Http Headers to be sent with the request.
+    ///
+    /// - parameter success: The block to be called if request succeeds.
+    ///
+    /// - parameter failure: The block to be called if request fails.
+    ///
+    /// - parameter retryAttempts: How many tries before calling `errorHandler` block.
+    ///
+    public func delete<RequestType, ResponseType>(
+        targetUrl: String,
+        requestObject: RequestType,
+        headers: [String: String]? = nil,
+        success: @escaping ((ResponseType?) -> Void),
+        failure: @escaping ((Error) -> Void),
+        retryAttempts: Int) where RequestType: Encodable, ResponseType: Decodable {
+
+        executeRequest(httpMethod: .delete,
+                       targetUrl: targetUrl,
+                       requestObject: requestObject,
+                       headers: headers,
+                       success: success,
+                       failure: failure,
+                       retryAttempts: retryAttempts)
 
     }
 
@@ -126,7 +399,7 @@ open class AppBaseApi {
         targetUrl: String,
         requestObject: RequestType? = nil,
         headers: [String: String]? = nil,
-        success: @escaping ((ResponseType) -> Void),
+        success: @escaping ((ResponseType?) -> Void),
         failure: @escaping ((Error) -> Void),
         retryAttempts: Int) where RequestType: Encodable, ResponseType: Decodable {
 
@@ -159,10 +432,8 @@ open class AppBaseApi {
                 if let data = data {
                     response <-- data
                 }
-                if let response = response {
-                    DispatchQueue.main.async {
-                        success(response)
-                    }
+                DispatchQueue.main.async {
+                    success(response)
                 }
             }
         }
