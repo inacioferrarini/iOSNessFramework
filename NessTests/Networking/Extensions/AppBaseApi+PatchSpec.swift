@@ -26,13 +26,13 @@ import Nimble
 import OHHTTPStubs
 @testable import Ness
 
-class AppBaseApiSpec: QuickSpec {
+class AppBaseApiPatchSpec: QuickSpec {
     
     override func spec() {
         
         describe("Base Api Request") {
             
-            context("Full method method") {
+            context("Patch method method") {
                 
                 afterEach {
                     OHHTTPStubs.removeAllStubs()
@@ -40,29 +40,26 @@ class AppBaseApiSpec: QuickSpec {
                 
                 it("if request without body succeeds, must return valid object") {
                     // Given
-                    stub(condition: isHost("www.apiurl.com") && isMethodGET()) { _ in
+                    stub(condition: isHost("www.apiurl.com") && isMethodPATCH()) { _ in
                         let notConnectedError = NSError(domain:NSURLErrorDomain, code:Int(CFNetworkErrors.cfurlErrorNotConnectedToInternet.rawValue), userInfo:nil)
                         let error = OHHTTPStubsResponse(error:notConnectedError)
                         guard let fixtureFile = OHPathForFile("ApiGetRequestResponseFixture.json", type(of: self)) else { return error }
-
+                        
                         return OHHTTPStubsResponse(
                             fileAtPath: fixtureFile,
                             statusCode: 200,
                             headers: ["Content-Type": "application/json"]
                         )
                     }
-
-                    let personRequest: PersonRequest? = nil
+                    
                     var personResponse: PersonResponse? = nil
                     let api = AppBaseApi("https://www.apiurl.com")
                     let targetUrl = "/path"
                     
                     // When
                     waitUntil { done in
-                        api.executeRequest(
-                            httpMethod: AppBaseApi.HttpMethod.get,
+                        api.patch(
                             targetUrl: targetUrl,
-                            requestObject: personRequest,
                             headers: nil,
                             success: { (response: PersonResponse?) in
                                 personResponse = response
@@ -72,26 +69,26 @@ class AppBaseApiSpec: QuickSpec {
                             done()
                         }, retryAttempts: 30)
                     }
-
+                    
                     // Then
                     expect(personResponse?["data"]?.count).to(equal(3))
-
+                    
                     expect(personResponse?["data"]?[0].name).to(equal("John Doe"))
                     expect(personResponse?["data"]?[0].age).to(equal(35))
                     expect(personResponse?["data"]?[0].boolValue).to(equal(true))
-
+                    
                     expect(personResponse?["data"]?[1].name).to(equal("John William"))
                     expect(personResponse?["data"]?[1].age).to(equal(40))
                     expect(personResponse?["data"]?[1].boolValue).to(equal(false))
-
+                    
                     expect(personResponse?["data"]?[2].name).to(equal("Jacob Michael"))
                     expect(personResponse?["data"]?[2].age).to(equal(37))
                     expect(personResponse?["data"]?[2].boolValue).to(equal(true))
                 }
-
-                it("if request without body and headers succeeds, must return valid object") {
+                
+                it("if request with body and headers succeeds, must return valid object") {
                     // Given
-                    stub(condition: isHost("www.apiurl.com") && isMethodGET()) { _ in
+                    stub(condition: isHost("www.apiurl.com") && isMethodPATCH()) { _ in
                         let notConnectedError = NSError(domain:NSURLErrorDomain, code:Int(CFNetworkErrors.cfurlErrorNotConnectedToInternet.rawValue), userInfo:nil)
                         let error = OHHTTPStubsResponse(error:notConnectedError)
                         guard let fixtureFile = OHPathForFile("ApiGetRequestResponseFixture.json", type(of: self)) else { return error }
@@ -104,15 +101,14 @@ class AppBaseApiSpec: QuickSpec {
                     }
                     
                     let headers = ["X-API-TOKEN" : "1234-12312-1231"]
-                    let personRequest: PersonRequest? = nil
+                    let personRequest: PersonRequest? = PersonRequest()
                     var personResponse: PersonResponse? = nil
                     let api = AppBaseApi("https://www.apiurl.com")
                     let targetUrl = "/path"
                     
                     // When
                     waitUntil { done in
-                        api.executeRequest(
-                            httpMethod: AppBaseApi.HttpMethod.get,
+                        api.patch(
                             targetUrl: targetUrl,
                             requestObject: personRequest,
                             headers: headers,
@@ -143,22 +139,19 @@ class AppBaseApiSpec: QuickSpec {
                 
                 it("if request fails, must execute failure block") {
                     // Given
-                    stub(condition: isHost("www.apiurl.com") && isMethodGET()) { _ in
+                    stub(condition: isHost("www.apiurl.com") && isMethodPATCH()) { _ in
                         let notConnectedError = NSError(domain:NSURLErrorDomain, code:Int(CFNetworkErrors.cfurlErrorNotConnectedToInternet.rawValue), userInfo:nil)
                         return OHHTTPStubsResponse(error: notConnectedError)
                     }
                     
-                    let personRequest: PersonRequest? = nil
                     var personResponse: PersonResponse? = nil
                     let api = AppBaseApi("https://www.apiurl.com")
                     let targetUrl = "/path"
                     
                     // When
                     waitUntil { done in
-                        api.executeRequest(
-                            httpMethod: AppBaseApi.HttpMethod.get,
+                        api.patch(
                             targetUrl: targetUrl,
-                            requestObject: personRequest,
                             headers: nil,
                             success: { (response: PersonResponse?) in
                                 fail("Mocked response returned success")
@@ -174,7 +167,7 @@ class AppBaseApiSpec: QuickSpec {
                 }
                 
             }
-
+            
         }
         
     }

@@ -24,6 +24,16 @@
 		BB19CFC5233DB1F4000BEBA1 /* CollectionViewBlockDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CFC4233DB1F4000BEBA1 /* CollectionViewBlockDelegateSpec.swift */; };
 		BB19CFC7233DB347000BEBA1 /* PageLoaderTableViewDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CFC6233DB347000BEBA1 /* PageLoaderTableViewDelegateSpec.swift */; };
 		BB19CFC9233DB38C000BEBA1 /* PageLoaderCollectionViewDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CFC8233DB38C000BEBA1 /* PageLoaderCollectionViewDelegateSpec.swift */; };
+		BB4EA92D23414EC600B60696 /* AppBaseApi+Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4EA92C23414EC600B60696 /* AppBaseApi+Get.swift */; };
+		BB4EA93123414EF400B60696 /* AppBaseApi+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4EA93023414EF400B60696 /* AppBaseApi+Post.swift */; };
+		BB4EA93323414F0000B60696 /* AppBaseApi+Patch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4EA93223414F0000B60696 /* AppBaseApi+Patch.swift */; };
+		BB4EA93523414F0B00B60696 /* AppBaseApi+Put.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4EA93423414F0B00B60696 /* AppBaseApi+Put.swift */; };
+		BB4EA93723414F1500B60696 /* AppBaseApi+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4EA93623414F1500B60696 /* AppBaseApi+Delete.swift */; };
+		BB4EA93A234154DB00B60696 /* AppBaseApi+GetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4EA939234154DB00B60696 /* AppBaseApi+GetSpec.swift */; };
+		BB4EA93C234154F800B60696 /* AppBaseApi+DeleteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4EA93B234154F800B60696 /* AppBaseApi+DeleteSpec.swift */; };
+		BB4EA93E2341550700B60696 /* AppBaseApi+PatchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4EA93D2341550700B60696 /* AppBaseApi+PatchSpec.swift */; };
+		BB4EA9402341551500B60696 /* AppBaseApi+PostSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4EA93F2341551500B60696 /* AppBaseApi+PostSpec.swift */; };
+		BB4EA9422341552100B60696 /* AppBaseApi+PutSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4EA9412341552100B60696 /* AppBaseApi+PutSpec.swift */; };
 		BB58BF4D232E6AD000A13142 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB58BF4B232E6AD000A13142 /* Quick.framework */; };
 		BB58BF4E232E6AD000A13142 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB58BF4C232E6AD000A13142 /* Nimble.framework */; };
 		BB58BF52232E6BBC00A13142 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BB58BF4C232E6AD000A13142 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -125,6 +135,16 @@
 		BB19CFC4233DB1F4000BEBA1 /* CollectionViewBlockDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBlockDelegateSpec.swift; sourceTree = "<group>"; };
 		BB19CFC6233DB347000BEBA1 /* PageLoaderTableViewDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageLoaderTableViewDelegateSpec.swift; sourceTree = "<group>"; };
 		BB19CFC8233DB38C000BEBA1 /* PageLoaderCollectionViewDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageLoaderCollectionViewDelegateSpec.swift; sourceTree = "<group>"; };
+		BB4EA92C23414EC600B60696 /* AppBaseApi+Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBaseApi+Get.swift"; sourceTree = "<group>"; };
+		BB4EA93023414EF400B60696 /* AppBaseApi+Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBaseApi+Post.swift"; sourceTree = "<group>"; };
+		BB4EA93223414F0000B60696 /* AppBaseApi+Patch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBaseApi+Patch.swift"; sourceTree = "<group>"; };
+		BB4EA93423414F0B00B60696 /* AppBaseApi+Put.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBaseApi+Put.swift"; sourceTree = "<group>"; };
+		BB4EA93623414F1500B60696 /* AppBaseApi+Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBaseApi+Delete.swift"; sourceTree = "<group>"; };
+		BB4EA939234154DB00B60696 /* AppBaseApi+GetSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBaseApi+GetSpec.swift"; sourceTree = "<group>"; };
+		BB4EA93B234154F800B60696 /* AppBaseApi+DeleteSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBaseApi+DeleteSpec.swift"; sourceTree = "<group>"; };
+		BB4EA93D2341550700B60696 /* AppBaseApi+PatchSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBaseApi+PatchSpec.swift"; sourceTree = "<group>"; };
+		BB4EA93F2341551500B60696 /* AppBaseApi+PostSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBaseApi+PostSpec.swift"; sourceTree = "<group>"; };
+		BB4EA9412341552100B60696 /* AppBaseApi+PutSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBaseApi+PutSpec.swift"; sourceTree = "<group>"; };
 		BB58BF4B232E6AD000A13142 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		BB58BF4C232E6AD000A13142 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		BBBC1505233D61F600467BD4 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
@@ -318,6 +338,38 @@
 				BB19CFC2233DB050000BEBA1 /* TableViewBlockDelegateSpec.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		BB4EA92E23414ECA00B60696 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB4EA92C23414EC600B60696 /* AppBaseApi+Get.swift */,
+				BB4EA93623414F1500B60696 /* AppBaseApi+Delete.swift */,
+				BB4EA93223414F0000B60696 /* AppBaseApi+Patch.swift */,
+				BB4EA93023414EF400B60696 /* AppBaseApi+Post.swift */,
+				BB4EA93423414F0B00B60696 /* AppBaseApi+Put.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BB4EA92F23414ED600B60696 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				BBEBC54D234103150020CC25 /* EmptyRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		BB4EA938234154BA00B60696 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB4EA939234154DB00B60696 /* AppBaseApi+GetSpec.swift */,
+				BB4EA93B234154F800B60696 /* AppBaseApi+DeleteSpec.swift */,
+				BB4EA93D2341550700B60696 /* AppBaseApi+PatchSpec.swift */,
+				BB4EA93F2341551500B60696 /* AppBaseApi+PostSpec.swift */,
+				BB4EA9412341552100B60696 /* AppBaseApi+PutSpec.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BB58BF4A232E6AD000A13142 /* Frameworks */ = {
@@ -692,8 +744,9 @@
 		BBEBC51B23403E610020CC25 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				BB4EA92E23414ECA00B60696 /* Extensions */,
+				BB4EA92F23414ED600B60696 /* Requests */,
 				BBEBC51C23403EAC0020CC25 /* AppBaseApi.swift */,
-				BBEBC54D234103150020CC25 /* EmptyRequest.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -701,6 +754,7 @@
 		BBEBC520234062480020CC25 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				BB4EA938234154BA00B60696 /* Extensions */,
 				BBEBC5212340631F0020CC25 /* AppBaseApiSpec.swift */,
 			);
 			path = Networking;
@@ -887,17 +941,22 @@
 				BBBC1528233D61F700467BD4 /* NSObject+Extensions.swift in Sources */,
 				BBBC152D233D61F700467BD4 /* CollectionViewArrayDataSource.swift in Sources */,
 				BBEBC504234024D20020CC25 /* Operators+Decodable.swift in Sources */,
+				BB4EA92D23414EC600B60696 /* AppBaseApi+Get.swift in Sources */,
 				BBEBC50723402D110020CC25 /* Operators+Encodable.swift in Sources */,
 				BBBC1529233D61F700467BD4 /* CoreDataProvider.swift in Sources */,
 				BBBC152B233D61F700467BD4 /* NSManagedObject+Fetch.swift in Sources */,
 				BBBC152E233D61F700467BD4 /* TableViewArrayDataSource.swift in Sources */,
+				BB4EA93123414EF400B60696 /* AppBaseApi+Post.swift in Sources */,
 				BBBC1533233D61F700467BD4 /* Strings.swift in Sources */,
 				BBBC1538233D61F700467BD4 /* ArrayDataSource.swift in Sources */,
 				BBBC1537233D61F700467BD4 /* Refreshable.swift in Sources */,
 				BBBC1530233D61F700467BD4 /* CollectionViewBlockDelegate.swift in Sources */,
+				BB4EA93723414F1500B60696 /* AppBaseApi+Delete.swift in Sources */,
+				BB4EA93323414F0000B60696 /* AppBaseApi+Patch.swift in Sources */,
 				BBBC1532233D61F700467BD4 /* TableViewBlockDelegate.swift in Sources */,
 				BBBC152A233D61F700467BD4 /* CoreDataStack.swift in Sources */,
 				BBEBC51F234055330020CC25 /* Operators.swift in Sources */,
+				BB4EA93523414F0B00B60696 /* AppBaseApi+Put.swift in Sources */,
 				BBBC152F233D61F700467BD4 /* PageLoaderCollectionViewDelegate.swift in Sources */,
 				BBBC1531233D61F700467BD4 /* PageLoaderTableViewDelegate.swift in Sources */,
 				BBEBC51D23403EAC0020CC25 /* AppBaseApi.swift in Sources */,
@@ -913,10 +972,13 @@
 				BB19CFB9233DAAF7000BEBA1 /* TestEntity+CoreDataClass.swift in Sources */,
 				BB19CF8F233D951A000BEBA1 /* AppContextSpec.swift in Sources */,
 				BBBC1579233D6F0000467BD4 /* RefreshableDataProvider.swift in Sources */,
+				BB4EA9422341552100B60696 /* AppBaseApi+PutSpec.swift in Sources */,
 				BBBC1574233D6E6500467BD4 /* ArrayDataSourceSpec.swift in Sources */,
+				BB4EA9402341551500B60696 /* AppBaseApi+PostSpec.swift in Sources */,
 				BB19CF9E233D9CF3000BEBA1 /* NumberCollectionViewCell.swift in Sources */,
 				BBBC1552233D652800467BD4 /* InternationalizableSpec.swift in Sources */,
 				BBBC1553233D652800467BD4 /* StringsSpec.swift in Sources */,
+				BB4EA93C234154F800B60696 /* AppBaseApi+DeleteSpec.swift in Sources */,
 				BBEBC5222340631F0020CC25 /* AppBaseApiSpec.swift in Sources */,
 				BB19CF96233D9A5B000BEBA1 /* TestTableView.swift in Sources */,
 				BBBC1576233D6E9700467BD4 /* ArrayDataProviderSpec.swift in Sources */,
@@ -940,6 +1002,8 @@
 				BB19CFC3233DB050000BEBA1 /* TableViewBlockDelegateSpec.swift in Sources */,
 				BB19CFC9233DB38C000BEBA1 /* PageLoaderCollectionViewDelegateSpec.swift in Sources */,
 				BB19CF93233D99F1000BEBA1 /* TableViewArrayDataSourceSpec.swift in Sources */,
+				BB4EA93A234154DB00B60696 /* AppBaseApi+GetSpec.swift in Sources */,
+				BB4EA93E2341550700B60696 /* AppBaseApi+PatchSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
