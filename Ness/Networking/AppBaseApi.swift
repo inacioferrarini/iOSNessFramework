@@ -76,6 +76,28 @@ open class AppBaseApi {
         self.rootUrl = rootUrl
     }
 
+    // MARK: - Http Verbs
+
+    public func get<RequestType, ResponseType>(
+        targetUrl: String,
+        requestObject: RequestType? = nil,
+        headers: [String: String]? = nil,
+        success: @escaping ((ResponseType) -> Void),
+        failure: @escaping ((Error) -> Void),
+        retryAttempts: Int) where RequestType: Encodable, ResponseType: Decodable {
+
+            executeRequest(httpMethod: .get,
+                           targetUrl: targetUrl,
+                           requestObject: requestObject,
+                           headers: headers,
+                           success: success,
+                           failure: failure,
+                           retryAttempts: retryAttempts)
+
+    }
+
+    // MARK: - Supporting methods
+
     ///
     /// Performs a httpMethod kind request to the given path.
     /// If the requests succeeds, the `completion` block will be called after converting the result

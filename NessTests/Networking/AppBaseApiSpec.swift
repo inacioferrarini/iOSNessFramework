@@ -32,7 +32,7 @@ class AppBaseApiSpec: QuickSpec {
         
         describe("Base Api Request") {
             
-            context("get") {
+            context("Full method method") {
                 
                 afterEach {
                     OHHTTPStubs.removeAllStubs()
