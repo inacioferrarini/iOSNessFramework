@@ -69,6 +69,16 @@
 		BBEBC51A234033AC0020CC25 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBC519234033AC0020CC25 /* Person.swift */; };
 		BBEBC51D23403EAC0020CC25 /* AppBaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBC51C23403EAC0020CC25 /* AppBaseApi.swift */; };
 		BBEBC51F234055330020CC25 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBC51E234055330020CC25 /* Operators.swift */; };
+		BBEBC5222340631F0020CC25 /* AppBaseApiSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBC5212340631F0020CC25 /* AppBaseApiSpec.swift */; };
+		BBEBC529234065840020CC25 /* ApiPutRequestResponseFixture.json in Resources */ = {isa = PBXBuildFile; fileRef = BBEBC524234065830020CC25 /* ApiPutRequestResponseFixture.json */; };
+		BBEBC52A234065840020CC25 /* ApiPatchRequestResponseFixture.json in Resources */ = {isa = PBXBuildFile; fileRef = BBEBC525234065830020CC25 /* ApiPatchRequestResponseFixture.json */; };
+		BBEBC52B234065840020CC25 /* ApiPostRequestResponseFixture.json in Resources */ = {isa = PBXBuildFile; fileRef = BBEBC526234065830020CC25 /* ApiPostRequestResponseFixture.json */; };
+		BBEBC52C234065840020CC25 /* ApiGetRequestResponseFixture.json in Resources */ = {isa = PBXBuildFile; fileRef = BBEBC527234065840020CC25 /* ApiGetRequestResponseFixture.json */; };
+		BBEBC52D234065840020CC25 /* ApiDeleteRequestResponseFixture.json in Resources */ = {isa = PBXBuildFile; fileRef = BBEBC528234065840020CC25 /* ApiDeleteRequestResponseFixture.json */; };
+		BBEBC52F234068DC0020CC25 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEBC52E234068DC0020CC25 /* OHHTTPStubs.framework */; };
+		BBEBC530234068F80020CC25 /* OHHTTPStubs.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBEBC52E234068DC0020CC25 /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BBEBC53523406ECE0020CC25 /* PersonRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBC53423406ECE0020CC25 /* PersonRequest.swift */; };
+		BBEBC53723406ED90020CC25 /* PersonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBC53623406ED90020CC25 /* PersonResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +98,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				BBEBC530234068F80020CC25 /* OHHTTPStubs.framework in CopyFiles */,
 				BB58BF52232E6BBC00A13142 /* Nimble.framework in CopyFiles */,
 				BB58BF53232E6BBC00A13142 /* Quick.framework in CopyFiles */,
 			);
@@ -160,6 +171,16 @@
 		BBEBC519234033AC0020CC25 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		BBEBC51C23403EAC0020CC25 /* AppBaseApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBaseApi.swift; sourceTree = "<group>"; };
 		BBEBC51E234055330020CC25 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		BBEBC5212340631F0020CC25 /* AppBaseApiSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBaseApiSpec.swift; sourceTree = "<group>"; };
+		BBEBC524234065830020CC25 /* ApiPutRequestResponseFixture.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ApiPutRequestResponseFixture.json; sourceTree = "<group>"; };
+		BBEBC525234065830020CC25 /* ApiPatchRequestResponseFixture.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ApiPatchRequestResponseFixture.json; sourceTree = "<group>"; };
+		BBEBC526234065830020CC25 /* ApiPostRequestResponseFixture.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ApiPostRequestResponseFixture.json; sourceTree = "<group>"; };
+		BBEBC527234065840020CC25 /* ApiGetRequestResponseFixture.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ApiGetRequestResponseFixture.json; sourceTree = "<group>"; };
+		BBEBC528234065840020CC25 /* ApiDeleteRequestResponseFixture.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ApiDeleteRequestResponseFixture.json; sourceTree = "<group>"; };
+		BBEBC52E234068DC0020CC25 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
+		BBEBC5312340692E0020CC25 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/TestClass.strings"; sourceTree = "<group>"; };
+		BBEBC53423406ECE0020CC25 /* PersonRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRequest.swift; sourceTree = "<group>"; };
+		BBEBC53623406ED90020CC25 /* PersonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBEBC52F234068DC0020CC25 /* OHHTTPStubs.framework in Frameworks */,
 				BBD509212337E2E5009CA4EE /* Ness.framework in Frameworks */,
 				BB58BF4D232E6AD000A13142 /* Quick.framework in Frameworks */,
 				BB58BF4E232E6AD000A13142 /* Nimble.framework in Frameworks */,
@@ -299,6 +321,7 @@
 		BB58BF4A232E6AD000A13142 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BBEBC52E234068DC0020CC25 /* OHHTTPStubs.framework */,
 				BB58BF4C232E6AD000A13142 /* Nimble.framework */,
 				BB58BF4B232E6AD000A13142 /* Quick.framework */,
 			);
@@ -455,10 +478,11 @@
 		BBBC1539233D63B400467BD4 /* HelperClasses */ = {
 			isa = PBXGroup;
 			children = (
+				BBEBC53323406EB90020CC25 /* Networking */,
+				BBEBC53223406E560020CC25 /* Model */,
 				BB19CFA9233DA33B000BEBA1 /* CoreData */,
 				BBEBC50C2340304E0020CC25 /* Fixtures */,
 				BBBC153A233D63B400467BD4 /* Internationalization */,
-				BBEBC518234033990020CC25 /* Operators */,
 				BBBC1577233D6EFF00467BD4 /* Providers */,
 				BB19CF94233D9A40000BEBA1 /* UIKit */,
 			);
@@ -487,6 +511,7 @@
 			isa = PBXGroup;
 			children = (
 				BB19CFA5233DA2A0000BEBA1 /* CoreData */,
+				BBEBC523234064F60020CC25 /* Fixtures */,
 				BBEBC50F2340313B0020CC25 /* Operators */,
 				BBBC1555233D654300467BD4 /* StringsSpec.strings */,
 			);
@@ -616,6 +641,7 @@
 				BBBC1585233D706300467BD4 /* CoreData */,
 				BBBC156D233D6D5D00467BD4 /* Extensions */,
 				BBBC154F233D652800467BD4 /* Internationalization */,
+				BBEBC520234062480020CC25 /* Networking */,
 				BBEBC50523402BFA0020CC25 /* Operators */,
 				BBBC157A233D6FB000467BD4 /* UIKit */,
 				BBD509272337E2E5009CA4EE /* Info.plist */,
@@ -661,18 +687,47 @@
 			path = Operators;
 			sourceTree = "<group>";
 		};
-		BBEBC518234033990020CC25 /* Operators */ = {
-			isa = PBXGroup;
-			children = (
-				BBEBC519234033AC0020CC25 /* Person.swift */,
-			);
-			path = Operators;
-			sourceTree = "<group>";
-		};
 		BBEBC51B23403E610020CC25 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				BBEBC51C23403EAC0020CC25 /* AppBaseApi.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BBEBC520234062480020CC25 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BBEBC5212340631F0020CC25 /* AppBaseApiSpec.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BBEBC523234064F60020CC25 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				BBEBC528234065840020CC25 /* ApiDeleteRequestResponseFixture.json */,
+				BBEBC527234065840020CC25 /* ApiGetRequestResponseFixture.json */,
+				BBEBC525234065830020CC25 /* ApiPatchRequestResponseFixture.json */,
+				BBEBC526234065830020CC25 /* ApiPostRequestResponseFixture.json */,
+				BBEBC524234065830020CC25 /* ApiPutRequestResponseFixture.json */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		BBEBC53223406E560020CC25 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BBEBC519234033AC0020CC25 /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BBEBC53323406EB90020CC25 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BBEBC53423406ECE0020CC25 /* PersonRequest.swift */,
+				BBEBC53623406ED90020CC25 /* PersonResponse.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -780,9 +835,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBEBC52D234065840020CC25 /* ApiDeleteRequestResponseFixture.json in Resources */,
+				BBEBC52C234065840020CC25 /* ApiGetRequestResponseFixture.json in Resources */,
 				BBBC1558233D654300467BD4 /* StringsSpec.strings in Resources */,
+				BBEBC529234065840020CC25 /* ApiPutRequestResponseFixture.json in Resources */,
 				BBEBC517234031E00020CC25 /* UnparseablePersonArray.json in Resources */,
 				BBEBC516234031E00020CC25 /* UnparseablePerson.json in Resources */,
+				BBEBC52A234065840020CC25 /* ApiPatchRequestResponseFixture.json in Resources */,
+				BBEBC52B234065840020CC25 /* ApiPostRequestResponseFixture.json in Resources */,
 				BBBC153F233D63B400467BD4 /* TestClass.strings in Resources */,
 				BBEBC5132340318E0020CC25 /* PersonArray.json in Resources */,
 				BBEBC5122340318E0020CC25 /* Person.json in Resources */,
@@ -853,11 +913,14 @@
 				BB19CF9E233D9CF3000BEBA1 /* NumberCollectionViewCell.swift in Sources */,
 				BBBC1552233D652800467BD4 /* InternationalizableSpec.swift in Sources */,
 				BBBC1553233D652800467BD4 /* StringsSpec.swift in Sources */,
+				BBEBC5222340631F0020CC25 /* AppBaseApiSpec.swift in Sources */,
 				BB19CF96233D9A5B000BEBA1 /* TestTableView.swift in Sources */,
 				BBBC1576233D6E9700467BD4 /* ArrayDataProviderSpec.swift in Sources */,
+				BBEBC53723406ED90020CC25 /* PersonResponse.swift in Sources */,
 				BBEBC50B23402D540020CC25 /* Operators+DecodableSpec.swift in Sources */,
 				BBBC153E233D63B400467BD4 /* TestClass.swift in Sources */,
 				BBBC156F233D6D7C00467BD4 /* NSObject+ExtensionsSpec.swift in Sources */,
+				BBEBC53523406ECE0020CC25 /* PersonRequest.swift in Sources */,
 				BB19CFB2233DA9BE000BEBA1 /* NessTests.xcdatamodeld in Sources */,
 				BB19CF98233D9AC8000BEBA1 /* NumberTableViewCell.swift in Sources */,
 				BBEBC50923402D440020CC25 /* Operators+EncodableSpec.swift in Sources */,
@@ -891,6 +954,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BBBC153D233D63B400467BD4 /* en-US */,
+				BBEBC5312340692E0020CC25 /* pt-BR */,
 			);
 			name = TestClass.strings;
 			sourceTree = "<group>";

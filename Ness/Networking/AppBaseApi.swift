@@ -24,42 +24,42 @@
 import Foundation
 
 ///
-/// Supported Http Methods
-///
-public enum HttpMethod: String {
-    ///
-    /// HTTP GET
-    ///
-    case get = "GET"
-
-    ///
-    /// HTTP POST
-    ///
-    case post = "POST"
-
-    ///
-    /// HTTP PUT
-    ///
-    case put = "PUT"
-
-    ///
-    /// HTTP PATCH
-    ///
-    case patch = "PATCH"
-
-    ///
-    /// HTTP DELETE
-    ///
-    case delete = "DELETE"
-
-}
-
-///
 /// Basic Api class.
 ///
 /// Handles remote HTTP requests using Apple APIs.
 ///
 open class AppBaseApi {
+
+    ///
+    /// Supported Http Methods
+    ///
+    public enum HttpMethod: String {
+        ///
+        /// HTTP GET
+        ///
+        case get = "GET"
+
+        ///
+        /// HTTP POST
+        ///
+        case post = "POST"
+
+        ///
+        /// HTTP PUT
+        ///
+        case put = "PUT"
+
+        ///
+        /// HTTP PATCH
+        ///
+        case patch = "PATCH"
+
+        ///
+        /// HTTP DELETE
+        ///
+        case delete = "DELETE"
+
+    }
 
     // MARK: - Properties
 
@@ -99,7 +99,7 @@ open class AppBaseApi {
     /// - parameter retryAttempts: How many tries before calling `errorHandler` block.
     ///
     open func executeRequest<RequestType, ResponseType>(
-        httpMethod: HttpMethod,
+        httpMethod: AppBaseApi.HttpMethod,
         _ endpointUrl: String? = nil,
         targetUrl: String,
         requestObject: RequestType? = nil,
