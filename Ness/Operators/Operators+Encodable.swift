@@ -23,22 +23,20 @@
 
 import Foundation
 
-infix operator <--
-
-extension Decodable {
+extension Encodable {
 
     ///
-    /// Transforms a `Data` into a `Decodable` object.
+    /// Transforms a `Encodable` into a `Data` object.
     ///
     /// - Parameters:
-    ///   - lhs: A `Decodable` object to be used. Will receive the transformed value.
-    ///   - rhs: A `Data` object to extract the data to be transformed.
+    ///   - lhs: A `Data` object to extract the data to be transformed.
+    ///   - rhs: A `Encodable` object. Will receive the transformed value.
     ///
-    public static func <-- (lhs: inout Self, rhs: Data) {
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        if let decodedValue = try? decoder.decode(Self.self, from: rhs) {
-            lhs = decodedValue
+    public static func <-- (lhs: inout Data, rhs: Self) {
+        let encoder = JSONEncoder()
+        encoder.keyEncodingStrategy = .convertToSnakeCase
+        if let encodedData = try? encoder.encode(rhs) {
+            lhs = encodedData
         }
     }
 

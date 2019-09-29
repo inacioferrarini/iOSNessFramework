@@ -23,23 +23,4 @@
 
 import Foundation
 
-infix operator -->
-
-extension Encodable {
-
-    ///
-    /// Transforms a `Encodable` into a `Data` object.
-    ///
-    /// - Parameters:
-    ///   - lhs: A `Data` object to extract the data to be transformed.
-    ///   - rhs: A `Encodable` object. Will receive the transformed value.
-    ///
-    public static func --> (lhs: Self, rhs: inout Data) {
-        let encoder = JSONEncoder()
-        encoder.keyEncodingStrategy = .convertToSnakeCase
-        if let encodedData = try? encoder.encode(lhs) {
-            rhs = encodedData
-        }
-    }
-
-}
+infix operator <--

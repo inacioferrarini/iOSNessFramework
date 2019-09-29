@@ -25,7 +25,7 @@ import Quick
 import Nimble
 @testable import Ness
 
-class DecodableOperatorSpec: QuickSpec {
+class OperatorsDecodableSpec: QuickSpec {
 
     override func spec() {
 

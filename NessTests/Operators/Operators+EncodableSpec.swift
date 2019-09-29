@@ -25,7 +25,7 @@ import Quick
 import Nimble
 @testable import Ness
 
-class EncodableOperatorSpec: QuickSpec {
+class OperatorsEncodableSpec: QuickSpec {
 
     override func spec() {
 
@@ -37,7 +37,7 @@ class EncodableOperatorSpec: QuickSpec {
                 person?.age = 20
                 
                 var data: Data = Data()
-                person --> data
+                data <-- person
                 
                 expect(data).toNot(beNil())
                 
@@ -45,21 +45,6 @@ class EncodableOperatorSpec: QuickSpec {
                 let expectedString = "{\"name\":\"NAME\",\"age\":20}"
                 expect(dataAsString).to(equal(expectedString))
             }
-
-//            it("if Encodable cannot be transformed, it must the the Data as it were before") {
-//                var person: Person? = Person()
-//                person?.name = "NAME"
-//                person?.age = 20
-//                
-//                var data: Data = Data()
-//                person --> data
-//                
-//                expect(data).toNot(beNil())
-//                
-//                let dataAsString = String(data: data, encoding: .utf8)
-//                let expectedString = "{\"name\":\"NAME\",\"age\":20}"
-//                expect(dataAsString).to(equal(expectedString))
-//            }
 
         }
 
