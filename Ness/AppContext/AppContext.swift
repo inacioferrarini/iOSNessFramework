@@ -24,7 +24,8 @@
 import Foundation
 
 ///
-/// Used to share data among modules
+/// Used to share data among different parts of the
+/// App without using singletons.
 ///
 public class AppContext {
 
