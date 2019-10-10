@@ -33,14 +33,61 @@ import UIKit
 /// while methods that receive multiple sections as parameter will handle data as an matrix, begin
 /// translatable as sections and rows.
 ///
+/// Supports filtering through `NSPredicate`.
+///
 open class ArrayDataProvider<ElementType: Equatable>: NSObject, DataProvider {
 
+    // MARK: - Private Properties
+    
+    private var allElements: [[ElementType]] = []
+    private var filteredElements: [[ElementType]] = []
+    
     // MARK: - Properties
+    
+    ///
+    /// The predicate to be applied to all elements.
+    /// When defined, will produce an alternative element list.
+    ///
+    open var predicate: NSPredicate? {
+        didSet {
+            filteredElements = filter(allElements)
+        }
+    }
+    
+    ///
+    /// Returns if there is a filter active.
+    ///
+    public var isFilterActive: Bool {
+        return predicate != nil
+    }
 
     ///
     /// Stored sections and rows.
     ///
-    public var elements: [[ElementType]]
+    public var elements: [[ElementType]] {
+        get {
+            if isFilterActive {
+                return filteredElements
+            }
+            return allElements
+        }
+        set (newElements) {
+            allElements = newElements
+            filteredElements = filter(newElements)
+        }
+    }
+
+    ///
+    /// Applies the predicate to all elements, returning the filtered array.
+    /// The amount of arrays will remain the same, even when the array content became
+    /// nil after filtering.
+    ///
+    /// - Parameter elements: Elements to be filtered
+    /// - Returns: The filteredElements.
+    ///
+    func filter(_ elements: [[ElementType]]) -> [[ElementType]] {
+        return elements.compactMap({ return $0.filter(using: self.predicate) })
+    }
 
     ///
     /// Section titles.
@@ -60,15 +107,6 @@ open class ArrayDataProvider<ElementType: Equatable>: NSObject, DataProvider {
     }
 
     ///
-    /// Inits with given elements.
-    ///
-    /// - parameter section: The sections and its rows to be stored.
-    ///
-	public convenience init(sections: [[ElementType]]) {
-		self.init(sections: sections, titles: nil)
-	}
-
-    ///
     /// Inits with given elements and its section titles.
     ///
     /// - parameter section: The sections and its rows to be stored.
@@ -76,9 +114,10 @@ open class ArrayDataProvider<ElementType: Equatable>: NSObject, DataProvider {
     /// - parameter titles: The titles for the given sections. If defined,
     ///   must have the same length as sections.
     ///
-	public init(sections: [[ElementType]], titles: [String]?) {
-		self.elements = sections
+	public init(sections: [[ElementType]], titles: [String]? = nil) {
 		self.titles = titles
+        super.init()
+        self.elements = sections
 	}
 
     // MARK: - Data Provider Implementation

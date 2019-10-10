@@ -35,7 +35,7 @@ open class CoreDataProvider<EntityType: NSManagedObject>: ArrayDataProvider<Enti
     /// The predicate to be applied to every data fetch operation.
     /// After changing the entity, the data must be fetched again, execute `refresh()` method.
     ///
-    open var predicate: NSPredicate? {
+    override open var predicate: NSPredicate? {
         didSet {
             self.fetchedResultsController.fetchRequest.predicate = predicate
         }
@@ -137,11 +137,11 @@ open class CoreDataProvider<EntityType: NSManagedObject>: ArrayDataProvider<Enti
 
         self.sortDescriptors = sortDescriptors
         self.managedObjectContext = context
-        self.predicate = predicate
         self.fetchLimit = fetchLimit
         self.sectionNameKeyPath = sectionNameKeyPath
         self.cacheName = cacheName
 		super.init(sections: [[]], titles: nil)
+        self.predicate = predicate
     }
 
     // MARK: - Public Methods
