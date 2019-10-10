@@ -13,8 +13,8 @@ platform :ios do
   lane :generate_reports do
     scan
     xcov(
-      project: "Flow.xcodeproj",
-      scheme: "Flow",
+      project: "Ness.xcodeproj",
+      scheme: "Ness",
       output_directory: "coverage_report",
       only_project_targets: "true"
     )
@@ -42,7 +42,7 @@ platform :ios do
     push_to_git_remote
     create_pull_request(
       api_token: ENV["GITHUB_API_TOKEN"],
-      repo: "inacioferrarini/iOSFlowFramework",
+      repo: "inacioferrarini/iOSNessFramework",
       title: "New Version"
     )
   end
