@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36A4F1C7234FB3AB004B61DD /* Array+NSPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A4F1C6234FB3AB004B61DD /* Array+NSPredicate.swift */; };
+		36A4F1C9234FBC7E004B61DD /* Array+NSPredicateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A4F1C8234FBC7E004B61DD /* Array+NSPredicateSpec.swift */; };
 		BB19CF8F233D951A000BEBA1 /* AppContextSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CF8E233D951A000BEBA1 /* AppContextSpec.swift */; };
 		BB19CF93233D99F1000BEBA1 /* TableViewArrayDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CF92233D99F1000BEBA1 /* TableViewArrayDataSourceSpec.swift */; };
 		BB19CF96233D9A5B000BEBA1 /* TestTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CF95233D9A5B000BEBA1 /* TestTableView.swift */; };
@@ -119,6 +121,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		36A4F1C6234FB3AB004B61DD /* Array+NSPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+NSPredicate.swift"; sourceTree = "<group>"; };
+		36A4F1C8234FBC7E004B61DD /* Array+NSPredicateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+NSPredicateSpec.swift"; sourceTree = "<group>"; };
 		BB19CF8E233D951A000BEBA1 /* AppContextSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContextSpec.swift; sourceTree = "<group>"; };
 		BB19CF92233D99F1000BEBA1 /* TableViewArrayDataSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewArrayDataSourceSpec.swift; sourceTree = "<group>"; };
 		BB19CF95233D9A5B000BEBA1 /* TestTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableView.swift; sourceTree = "<group>"; };
@@ -395,6 +399,7 @@
 		BBBC1506233D61F600467BD4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				36A4F1C6234FB3AB004B61DD /* Array+NSPredicate.swift */,
 				BBBC1507233D61F600467BD4 /* NSObject+Extensions.swift */,
 			);
 			path = Extensions;
@@ -586,6 +591,7 @@
 		BBBC156D233D6D5D00467BD4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				36A4F1C8234FBC7E004B61DD /* Array+NSPredicateSpec.swift */,
 				BBBC156E233D6D7C00467BD4 /* NSObject+ExtensionsSpec.swift */,
 			);
 			path = Extensions;
@@ -961,6 +967,7 @@
 				BBBC152A233D61F700467BD4 /* CoreDataStack.swift in Sources */,
 				BBEBC51F234055330020CC25 /* Operators.swift in Sources */,
 				BB4EA93523414F0B00B60696 /* AppBaseApi+Put.swift in Sources */,
+				36A4F1C7234FB3AB004B61DD /* Array+NSPredicate.swift in Sources */,
 				BBBC152F233D61F700467BD4 /* PageLoaderCollectionViewDelegate.swift in Sources */,
 				BBBC1531233D61F700467BD4 /* PageLoaderTableViewDelegate.swift in Sources */,
 				BBEBC51D23403EAC0020CC25 /* AppBaseApi.swift in Sources */,
@@ -1003,6 +1010,7 @@
 				BB19CF9C233D9BF7000BEBA1 /* TestCollectionView.swift in Sources */,
 				BB19CFBA233DAAF7000BEBA1 /* TestEntity+CoreDataProperties.swift in Sources */,
 				BBEBC50E2340305D0020CC25 /* FixtureHelper.swift in Sources */,
+				36A4F1C9234FBC7E004B61DD /* Array+NSPredicateSpec.swift in Sources */,
 				BB19CFC3233DB050000BEBA1 /* TableViewBlockDelegateSpec.swift in Sources */,
 				BB19CFC9233DB38C000BEBA1 /* PageLoaderCollectionViewDelegateSpec.swift in Sources */,
 				BB19CF93233D99F1000BEBA1 /* TableViewArrayDataSourceSpec.swift in Sources */,

@@ -101,7 +101,7 @@ class CoreDataProviderSpec: QuickSpec {
                     // Given
                     expect(provider?.numberOfSections()).to(equal(0))
                     expect(provider?.numberOfItems(in: 0)).to(equal(0))
-
+                    
                     // When
                     try? provider?.refresh()
 
@@ -239,6 +239,32 @@ class CoreDataProviderSpec: QuickSpec {
 
             }
 
+            context("method title") {
+                
+                beforeEach {
+                    if let context = stack.managedObjectContext {
+                        provider = CoreDataProvider<TestEntity>(sortDescriptors: [],
+                                                                managedObjectContext: context,
+                                                                predicate: nil,
+                                                                fetchLimit: nil,
+                                                                sectionNameKeyPath: "group",
+                                                                cacheName: nil)
+                        _ = TestEntity.testEntity(with: "test value 1", group: "group", in: context)
+                        try? stack.saveContext()
+                    }
+                }
+
+                it("when section is greater than amount of sections, must return nil") {
+                    try? provider?.refresh()
+                    expect(provider?.title(section: 2)).to(beNil())
+                }
+                
+                it("when section is lower than amount of sections, must return the amount of items") {
+                    try? provider?.refresh()
+                    expect(provider?.title(section: 0)).to(equal("group"))
+                }
+
+            }
 
             context("Multiple Sections") {
 

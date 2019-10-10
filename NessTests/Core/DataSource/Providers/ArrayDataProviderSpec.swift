@@ -88,6 +88,32 @@ class ArrayDataProviderSpec: QuickSpec {
 
             }
 
+            context("Applying Filters") {
+
+                it("A Matrix, when filtered, must keep the same amount of arrays, even if they are empty") {
+                    // Given
+                    let items = [[10, 30], [40], [100]]
+                    let titles = ["Section Title 1", "Section Title 2", "Section Title 3"]
+                    let predicate = NSPredicate(format: "SELF > %d", 10)
+
+                    // When
+                    let dataProvider = ArrayDataProvider<Int>(sections: items, titles: titles)
+                    dataProvider.predicate = predicate
+
+                    // Then
+                    expect(dataProvider.numberOfSections()).to(equal(3))
+                    
+                    expect(dataProvider.numberOfItems(in: 0)).to(equal(1))
+                    expect(dataProvider.numberOfItems(in: 1)).to(equal(1))
+                    expect(dataProvider.numberOfItems(in: 2)).to(equal(1))
+
+                    expect(dataProvider.title(section: 0)).to(equal("Section Title 1"))
+                    expect(dataProvider.title(section: 1)).to(equal("Section Title 2"))
+                    expect(dataProvider.title(section: 2)).to(equal("Section Title 3"))
+                }
+
+            }
+            
             context("Using Rows") {
 
                 var items = [Int]()
