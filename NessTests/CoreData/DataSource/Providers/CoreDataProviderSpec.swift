@@ -52,7 +52,7 @@ class CoreDataProviderSpec: QuickSpec {
                         provider = CoreDataProvider<TestEntity>(sortDescriptors: [],
                                                                 managedObjectContext: context,
                                                                 predicate: nil,
-                                                                fetchLimit: nil,
+                                                                fetchLimit: 1000,
                                                                 sectionNameKeyPath: nil,
                                                                 cacheName: nil)
                     }

@@ -68,6 +68,7 @@
 		BBBC1574233D6E6500467BD4 /* ArrayDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1573233D6E6500467BD4 /* ArrayDataSourceSpec.swift */; };
 		BBBC1576233D6E9700467BD4 /* ArrayDataProviderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1575233D6E9700467BD4 /* ArrayDataProviderSpec.swift */; };
 		BBBC1579233D6F0000467BD4 /* RefreshableDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1578233D6EFF00467BD4 /* RefreshableDataProvider.swift */; };
+		BBBE70F42368FFFD0099D44D /* NonLocalizedStringsSpec.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBBE70F32368FFFD0099D44D /* NonLocalizedStringsSpec.strings */; };
 		BBD509212337E2E5009CA4EE /* Ness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD509172337E2E4009CA4EE /* Ness.framework */; };
 		BBD509282337E2E5009CA4EE /* Ness.h in Headers */ = {isa = PBXBuildFile; fileRef = BBD5091A2337E2E4009CA4EE /* Ness.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BBEBC504234024D20020CC25 /* Operators+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBC503234024D20020CC25 /* Operators+Decodable.swift */; };
@@ -181,6 +182,7 @@
 		BBBC1573233D6E6500467BD4 /* ArrayDataSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayDataSourceSpec.swift; sourceTree = "<group>"; };
 		BBBC1575233D6E9700467BD4 /* ArrayDataProviderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayDataProviderSpec.swift; sourceTree = "<group>"; };
 		BBBC1578233D6EFF00467BD4 /* RefreshableDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshableDataProvider.swift; sourceTree = "<group>"; };
+		BBBE70F32368FFFD0099D44D /* NonLocalizedStringsSpec.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = NonLocalizedStringsSpec.strings; sourceTree = "<group>"; };
 		BBD509172337E2E4009CA4EE /* Ness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD5091A2337E2E4009CA4EE /* Ness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ness.h; sourceTree = "<group>"; };
 		BBD5091B2337E2E4009CA4EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -576,6 +578,7 @@
 				BBEBC523234064F60020CC25 /* Fixtures */,
 				BBEBC50F2340313B0020CC25 /* Operators */,
 				BBBC1555233D654300467BD4 /* StringsSpec.strings */,
+				BBBE70F32368FFFD0099D44D /* NonLocalizedStringsSpec.strings */,
 			);
 			path = TestResources;
 			sourceTree = "<group>";
@@ -903,6 +906,7 @@
 				BBEBC52D234065840020CC25 /* ApiDeleteRequestResponseFixture.json in Resources */,
 				BBEBC52C234065840020CC25 /* ApiGetRequestResponseFixture.json in Resources */,
 				BBBC1558233D654300467BD4 /* StringsSpec.strings in Resources */,
+				BBBE70F42368FFFD0099D44D /* NonLocalizedStringsSpec.strings in Resources */,
 				BBEBC529234065840020CC25 /* ApiPutRequestResponseFixture.json in Resources */,
 				BBEBC517234031E00020CC25 /* UnparseablePersonArray.json in Resources */,
 				BBEBC516234031E00020CC25 /* UnparseablePerson.json in Resources */,
