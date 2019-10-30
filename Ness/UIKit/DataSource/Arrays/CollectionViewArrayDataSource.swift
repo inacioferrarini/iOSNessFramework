@@ -41,6 +41,12 @@ open class CollectionViewArrayDataSource<CellType: UICollectionViewCell, Type: E
     ///
     let reuseIdentifier: ((IndexPath) -> (String))
 
+    ///
+    /// This clojure is executed, for each cell, before the cell's `setup` method is executed.
+    /// Allows a custom preparation of the cell to take place before setup is properly executed.
+    ///
+    public var prepareCellBlock: ((_ cell: CellType) -> Void)?
+
     // MARK: - Initialization
 
     ///
@@ -117,9 +123,9 @@ open class CollectionViewArrayDataSource<CellType: UICollectionViewCell, Type: E
         guard var cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? CellType else { return UICollectionViewCell() }
 
         if let value = self.dataProvider[indexPath] as? CellType.ValueType {
+            self.prepareCellBlock?(cell)
             cell.setup(with: value)
         }
-
         return cell
     }
 
