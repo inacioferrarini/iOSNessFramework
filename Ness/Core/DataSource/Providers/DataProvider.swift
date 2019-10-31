@@ -21,8 +21,6 @@
 //    SOFTWARE.
 //
 
-import Foundation
-
 ///
 /// Provides data for a DataSource. Its provided objects will be of type `ValueType`.
 ///

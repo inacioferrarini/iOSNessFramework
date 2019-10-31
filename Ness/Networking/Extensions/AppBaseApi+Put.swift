@@ -21,8 +21,6 @@
 //    SOFTWARE.
 //
 
-import Foundation
-
 public extension AppBaseApi {
 
     /// Performs a `put` request without body.

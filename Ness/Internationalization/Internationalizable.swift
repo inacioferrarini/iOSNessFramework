@@ -21,8 +21,6 @@
 //    SOFTWARE.
 //
 
-import Foundation
-
 ///
 /// Markup protocol that allows any object to get
 /// a string from a string table having the same name

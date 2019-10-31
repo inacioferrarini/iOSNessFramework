@@ -21,7 +21,6 @@
 //    SOFTWARE.
 //
 
-import Foundation
 import CoreData
 import Quick
 import Nimble

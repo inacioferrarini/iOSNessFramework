@@ -21,8 +21,6 @@
 //    SOFTWARE.
 //
 
-import Foundation
-
 ///
 /// Adds useful capabilities to NSObject.
 ///

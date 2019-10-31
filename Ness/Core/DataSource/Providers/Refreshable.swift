@@ -21,8 +21,6 @@
 //    SOFTWARE.
 //
 
-import Foundation
-
 ///
 /// The capability some `DataProviders` has to be refreshable.
 ///

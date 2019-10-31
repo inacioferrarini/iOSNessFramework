@@ -21,8 +21,6 @@
 //    SOFTWARE.
 //
 
-import Foundation
-
 ///
 /// Ease the usage of strings from different String tables.
 ///

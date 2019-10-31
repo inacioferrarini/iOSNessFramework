@@ -21,8 +21,6 @@
 //    SOFTWARE.
 //
 
-import Foundation
-
 public extension AppBaseApi {
 
     /// Performs a `post` request without body.
