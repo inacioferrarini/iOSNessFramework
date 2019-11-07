@@ -53,6 +53,7 @@ platform :ios do
       branch: 'master'
     )
     ensure_git_status_clean
+    git_pull
     version = get_version_number(
       xcodeproj: "Ness.xcodeproj"
     )
