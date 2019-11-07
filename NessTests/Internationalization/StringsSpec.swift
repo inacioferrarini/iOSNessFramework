@@ -33,6 +33,7 @@ class StringsSpec: QuickSpec {
 
             let testBundle = Bundle(for: StringsSpec.self)
             let table = "StringsSpec"
+            let nonLocalizedTable = "NonLocalizedStringsSpec"
             
             context("When languageCode is valid") {
 
@@ -77,6 +78,15 @@ class StringsSpec: QuickSpec {
                 it("must load string from ja localized string file") {
                     let loadedString = Strings.string("TestString1", languageCode: languageCode, bundle: testBundle, table: table, default: "String not found")
                     expect(loadedString).to(equal("String not found"))
+                }
+
+            }
+            
+            context("When string file is not localized") {
+
+                it("must load string from non-localized string file") {
+                    let loadedString = Strings.string("TestString", bundle: testBundle, table: nonLocalizedTable, default: "String not found")
+                    expect(loadedString).to(equal("Non localized string"))
                 }
 
             }

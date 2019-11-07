@@ -21,8 +21,6 @@
 //    SOFTWARE.
 //
 
-import Foundation
-
 ///
 /// Markup protocol that allows any object to have an
 /// AppContext reference.

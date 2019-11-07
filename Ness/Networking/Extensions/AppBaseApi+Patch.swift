@@ -21,8 +21,6 @@
 //    SOFTWARE.
 //
 
-import Foundation
-
 public extension AppBaseApi {
 
     /// Performs a `patch` request without body.

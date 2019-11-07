@@ -21,6 +21,4 @@
 //    SOFTWARE.
 //
 
-import Foundation
-
 infix operator <--

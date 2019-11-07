@@ -21,8 +21,6 @@
 //    SOFTWARE.
 //
 
-import Foundation
-
 ///
 /// Markup protocol that allows any object to get
 /// a string from a string table having the same name
@@ -34,10 +32,10 @@ public protocol Internationalizable: AnyObject {
     ///
     /// - Parameters:
     ///   - stringName: The string to be retrieved.
-    ///   - languageCode: The language code for the string file.
+    ///   - languageCode: The language code for the string file. If `nil`, will try to find a non-localized file.
     /// - Returns: the string, or default value if not found.
     ///
-    func string(_ stringName: String, languageCode: String) -> String
+    func string(_ stringName: String, languageCode: String?) -> String
 
 }
 
@@ -50,7 +48,7 @@ public extension Internationalizable {
     /// - languageCode: The language code for the string file.
     /// - returns: the string, or default value if not found.
     ///
-    func string(_ stringName: String, languageCode: String) -> String {
+    func string(_ stringName: String, languageCode: String? = nil) -> String {
         let bundle = Bundle(for: Self.self)
         let table = String(describing: type(of: self))
         return Strings.string(stringName, languageCode: languageCode, bundle: bundle, table: table)

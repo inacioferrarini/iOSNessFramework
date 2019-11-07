@@ -38,12 +38,12 @@ import UIKit
 open class ArrayDataProvider<ElementType: Equatable>: NSObject, DataProvider {
 
     // MARK: - Private Properties
-    
+
     private var allElements: [[ElementType]] = []
     private var filteredElements: [[ElementType]] = []
-    
+
     // MARK: - Properties
-    
+
     ///
     /// The predicate to be applied to all elements.
     /// When defined, will produce an alternative element list.
@@ -53,7 +53,7 @@ open class ArrayDataProvider<ElementType: Equatable>: NSObject, DataProvider {
             filteredElements = filter(allElements)
         }
     }
-    
+
     ///
     /// Returns if there is a filter active.
     ///

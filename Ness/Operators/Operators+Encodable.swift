@@ -21,8 +21,6 @@
 //    SOFTWARE.
 //
 
-import Foundation
-
 extension Encodable {
 
     ///

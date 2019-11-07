@@ -41,6 +41,12 @@ open class TableViewArrayDataSource<CellType: UITableViewCell, Type: Equatable>:
     ///
     let reuseIdentifier: ((IndexPath) -> (String))
 
+    ///
+    /// This clojure is executed, for each cell, before the cell's `setup` method is executed.
+    /// Allows a custom preparation of the cell to take place before setup is properly executed.
+    ///
+    public var prepareCellBlock: ((_ cell: CellType) -> Void)?
+
     // MARK: - Initialization
 
     ///
@@ -117,6 +123,7 @@ open class TableViewArrayDataSource<CellType: UITableViewCell, Type: Equatable>:
         guard var cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? CellType else { return UITableViewCell() }
 
         if let value = self.dataProvider[indexPath] as? CellType.ValueType {
+            self.prepareCellBlock?(cell)
             cell.setup(with: value)
         }
 

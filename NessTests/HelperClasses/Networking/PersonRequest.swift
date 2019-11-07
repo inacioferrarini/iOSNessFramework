@@ -21,8 +21,6 @@
 //    SOFTWARE.
 //
 
-import Foundation
-
 struct PersonRequest: Encodable {
     
 }

@@ -21,8 +21,6 @@
 //    SOFTWARE.
 //
 
-import Foundation
-
 ///
 /// Used to share data among different parts of the
 /// App without using singletons.
