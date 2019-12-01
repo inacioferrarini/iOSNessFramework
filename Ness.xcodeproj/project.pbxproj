@@ -41,6 +41,7 @@
 		BB58BF4E232E6AD000A13142 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB58BF4C232E6AD000A13142 /* Nimble.framework */; };
 		BB58BF52232E6BBC00A13142 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BB58BF4C232E6AD000A13142 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BB58BF53232E6BBC00A13142 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BB58BF4B232E6AD000A13142 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BB75E4B92393E3A700AEE851 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75E4B82393E3A700AEE851 /* Response.swift */; };
 		BBBC1527233D61F700467BD4 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1505233D61F600467BD4 /* Configurable.swift */; };
 		BBBC1528233D61F700467BD4 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1507233D61F600467BD4 /* NSObject+Extensions.swift */; };
 		BBBC1529233D61F700467BD4 /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC150B233D61F600467BD4 /* CoreDataProvider.swift */; };
@@ -154,6 +155,7 @@
 		BB4EA9412341552100B60696 /* AppBaseApi+PutSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBaseApi+PutSpec.swift"; sourceTree = "<group>"; };
 		BB58BF4B232E6AD000A13142 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		BB58BF4C232E6AD000A13142 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		BB75E4B82393E3A700AEE851 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		BBBC1505233D61F600467BD4 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		BBBC1507233D61F600467BD4 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
 		BBBC150B233D61F600467BD4 /* CoreDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
@@ -388,6 +390,14 @@
 				BB58BF4B232E6AD000A13142 /* Quick.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB75E4B72393E37200AEE851 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				BB75E4B82393E3A700AEE851 /* Response.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		BBBC1504233D61F600467BD4 /* Configurable */ = {
@@ -758,6 +768,7 @@
 			children = (
 				BB4EA92E23414ECA00B60696 /* Extensions */,
 				BB4EA92F23414ED600B60696 /* Requests */,
+				BB75E4B72393E37200AEE851 /* Response */,
 				BBEBC51C23403EAC0020CC25 /* AppBaseApi.swift */,
 			);
 			path = Networking;
@@ -965,6 +976,7 @@
 				BBBC1537233D61F700467BD4 /* Refreshable.swift in Sources */,
 				BBBC1530233D61F700467BD4 /* CollectionViewBlockDelegate.swift in Sources */,
 				BB4EA93723414F1500B60696 /* AppBaseApi+Delete.swift in Sources */,
+				BB75E4B92393E3A700AEE851 /* Response.swift in Sources */,
 				BB4EA93323414F0000B60696 /* AppBaseApi+Patch.swift in Sources */,
 				BBBC1532233D61F700467BD4 /* TableViewBlockDelegate.swift in Sources */,
 				BBBC152A233D61F700467BD4 /* CoreDataStack.swift in Sources */,

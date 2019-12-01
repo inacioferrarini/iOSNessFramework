@@ -21,33 +21,7 @@
 //    SOFTWARE.
 //
 
-public extension AppBaseApi {
-
-    /// Performs a `get` request without body.
-    ///
-    /// - Parameters:
-    ///
-    /// - parameter targetUrl: The request path.
-    ///
-    /// - parameter headers: Http Headers to be sent with the request.
-    ///
-    /// - parameter completionHandler: the block to be called when the request completes.
-    ///
-    /// - parameter retryAttempts: How many tries before calling `errorHandler` block.
-    ///
-    public func get<ResponseType>(
-        targetUrl: String,
-        headers: [String: String]? = nil,
-        completionHandler: @escaping ((Response<ResponseType?, Error>) -> Void),
-        retryAttempts: Int) where ResponseType: Decodable {
-
-        executeRequest(httpMethod: .get,
-                       targetUrl: targetUrl,
-                       requestObject: EmptyRequest(),
-                       headers: headers,
-                       completionHandler: completionHandler,
-                       retryAttempts: retryAttempts)
-
-    }
-
+public enum Response<Success, Failure> {
+    case success(Success)
+    case failure(Failure)
 }
