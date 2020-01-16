@@ -4,12 +4,6 @@ default_platform(:ios)
 
 platform :ios do
 
-lane :test_env_var do
-  ensure_env_vars(
-    env_vars: ["GITHUB_API_TOKEN"]
-  )      
-end
-
   desc "Generates documentation"
   lane :generate_docs do
     jazzy
