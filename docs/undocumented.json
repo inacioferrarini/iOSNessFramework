@@ -1,6 +1,26 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/inacio.ferrarini/Developer/iOS/Frameworks/iOSNessFramework/Ness/Networking/Response/Response.swift",
+      "line": 24,
+      "symbol": "Response",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/inacio.ferrarini/Developer/iOS/Frameworks/iOSNessFramework/Ness/Networking/Response/Response.swift",
+      "line": 25,
+      "symbol": "Response.success(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/inacio.ferrarini/Developer/iOS/Frameworks/iOSNessFramework/Ness/Networking/Response/Response.swift",
+      "line": 26,
+      "symbol": "Response.failure(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
   ],
-  "source_directory": "/Users/inacio.ferrarini/Developer/iOS/Evaluations/Concrete/MovieListApp/Modules/Ness"
+  "source_directory": "/Users/inacio.ferrarini/Developer/iOS/Frameworks/iOSNessFramework"
 }

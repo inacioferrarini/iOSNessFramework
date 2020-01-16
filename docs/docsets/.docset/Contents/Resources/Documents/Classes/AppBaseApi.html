@@ -14,7 +14,7 @@
     <a title="AppBaseApi Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+        <p><a href="../index.html"> Docs</a> (97% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -68,6 +68,14 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/TableViewBlockDelegate.html">TableViewBlockDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Response.html">Response</a>
               </li>
             </ul>
           </li>
@@ -238,9 +246,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Ness10AppBaseApiC14executeRequest10httpMethod_9targetUrl13requestObject7headers7success7failure13retryAttemptsyAC04HttpH0O_SSSgSSxSgSDyS2SGSgyq_Sgcys5Error_pcSitSERzSeR_r0_lF"></a>
-                    <a name="//apple_ref/swift/Method/executeRequest(httpMethod:_:targetUrl:requestObject:headers:success:failure:retryAttempts:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Ness10AppBaseApiC14executeRequest10httpMethod_9targetUrl13requestObject7headers7success7failure13retryAttemptsyAC04HttpH0O_SSSgSSxSgSDyS2SGSgyq_Sgcys5Error_pcSitSERzSeR_r0_lF">executeRequest(httpMethod:_:targetUrl:requestObject:headers:success:failure:retryAttempts:)</a>
+                    <a name="/s:4Ness10AppBaseApiC14executeRequest10httpMethod_9targetUrl13requestObject7headers17completionHandler13retryAttemptsyAC04HttpH0O_SSSgSSxSgSDyS2SGSgyAA8ResponseOyq_Sgs5Error_pGcSitSERzSeR_r0_lF"></a>
+                    <a name="//apple_ref/swift/Method/executeRequest(httpMethod:_:targetUrl:requestObject:headers:completionHandler:retryAttempts:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Ness10AppBaseApiC14executeRequest10httpMethod_9targetUrl13requestObject7headers17completionHandler13retryAttemptsyAC04HttpH0O_SSSgSSxSgSDyS2SGSgyAA8ResponseOyq_Sgs5Error_pGcSitSERzSeR_r0_lF">executeRequest(httpMethod:_:targetUrl:requestObject:headers:completionHandler:retryAttempts:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -264,8 +272,7 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
     <span class="nv">targetUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
     <span class="nv">requestObject</span><span class="p">:</span> <span class="kt">RequestType</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
     <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-    <span class="nv">success</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">ResponseType</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
-    <span class="nv">failure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
+    <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt"><a href="../Enums/Response.html">Response</a></span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="p">?,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
     <span class="nv">retryAttempts</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">where</span> <span class="kt">RequestType</span><span class="p">:</span> <span class="kt">Encodable</span><span class="p">,</span> <span class="kt">ResponseType</span><span class="p">:</span> <span class="kt">Decodable</span></code></pre>
 
                         </div>
@@ -283,6 +290,18 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                               <td>
                                 <div>
                                   <p>Http method to execute.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>_</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The server base url. If <code>nil</code>, <code>rootUrl</code> will be used.</p>
                                 </div>
                               </td>
                             </tr>
@@ -325,24 +344,12 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                             <tr>
                               <td>
                                 <code>
-                                <em>success</em>
+                                <em>completionHandler</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The block to be called if request succeeds.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>failure</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The block to be called if request fails.</p>
+                                  <p>the block to be called when the request completes.</p>
                                 </div>
                               </td>
                             </tr>
@@ -371,9 +378,9 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Ness10AppBaseApiC6delete9targetUrl7headers7success7failure13retryAttemptsySS_SDyS2SGSgyxSgcys5Error_pcSitSeRzlF"></a>
-                    <a name="//apple_ref/swift/Method/delete(targetUrl:headers:success:failure:retryAttempts:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Ness10AppBaseApiC6delete9targetUrl7headers7success7failure13retryAttemptsySS_SDyS2SGSgyxSgcys5Error_pcSitSeRzlF">delete(targetUrl:headers:success:failure:retryAttempts:)</a>
+                    <a name="/s:4Ness10AppBaseApiC6delete9targetUrl7headers17completionHandler13retryAttemptsySS_SDyS2SGSgyAA8ResponseOyxSgs5Error_pGcSitSeRzlF"></a>
+                    <a name="//apple_ref/swift/Method/delete(targetUrl:headers:completionHandler:retryAttempts:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Ness10AppBaseApiC6delete9targetUrl7headers17completionHandler13retryAttemptsySS_SDyS2SGSgyAA8ResponseOyxSgs5Error_pGcSitSeRzlF">delete(targetUrl:headers:completionHandler:retryAttempts:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -388,11 +395,10 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">delete</span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="o">&gt;</span><span class="p">(</span>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">delete</span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="o">&gt;</span><span class="p">(</span>
     <span class="nv">targetUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
     <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-    <span class="nv">success</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">ResponseType</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
-    <span class="nv">failure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
+    <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt"><a href="../Enums/Response.html">Response</a></span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="p">?,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
     <span class="nv">retryAttempts</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">where</span> <span class="kt">ResponseType</span><span class="p">:</span> <span class="kt">Decodable</span></code></pre>
 
                         </div>
@@ -428,24 +434,12 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                             <tr>
                               <td>
                                 <code>
-                                <em>success</em>
+                                <em>completionHandler</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The block to be called if request succeeds.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>failure</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The block to be called if request fails.</p>
+                                  <p>the block to be called when the request completes.</p>
                                 </div>
                               </td>
                             </tr>
@@ -470,9 +464,9 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Ness10AppBaseApiC6delete9targetUrl13requestObject7headers7success7failure13retryAttemptsySS_xSDyS2SGSgyq_Sgcys5Error_pcSitSERzSeR_r0_lF"></a>
-                    <a name="//apple_ref/swift/Method/delete(targetUrl:requestObject:headers:success:failure:retryAttempts:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Ness10AppBaseApiC6delete9targetUrl13requestObject7headers7success7failure13retryAttemptsySS_xSDyS2SGSgyq_Sgcys5Error_pcSitSERzSeR_r0_lF">delete(targetUrl:requestObject:headers:success:failure:retryAttempts:)</a>
+                    <a name="/s:4Ness10AppBaseApiC6delete9targetUrl13requestObject7headers17completionHandler13retryAttemptsySS_xSDyS2SGSgyAA8ResponseOyq_Sgs5Error_pGcSitSERzSeR_r0_lF"></a>
+                    <a name="//apple_ref/swift/Method/delete(targetUrl:requestObject:headers:completionHandler:retryAttempts:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Ness10AppBaseApiC6delete9targetUrl13requestObject7headers17completionHandler13retryAttemptsySS_xSDyS2SGSgyAA8ResponseOyq_Sgs5Error_pGcSitSERzSeR_r0_lF">delete(targetUrl:requestObject:headers:completionHandler:retryAttempts:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -482,21 +476,16 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                       <div class="abstract">
                         <p>Performs a <code>delete</code> request with <code>requestObject</code> as body.</p>
 
-<ul>
-<li><p>requestObject: body data to be sent with the request</p></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">delete</span><span class="o">&lt;</span><span class="kt">RequestType</span><span class="p">,</span> <span class="kt">ResponseType</span><span class="o">&gt;</span><span class="p">(</span>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">delete</span><span class="o">&lt;</span><span class="kt">RequestType</span><span class="p">,</span> <span class="kt">ResponseType</span><span class="o">&gt;</span><span class="p">(</span>
     <span class="nv">targetUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
     <span class="nv">requestObject</span><span class="p">:</span> <span class="kt">RequestType</span><span class="p">,</span>
     <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-    <span class="nv">success</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">ResponseType</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
-    <span class="nv">failure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
+    <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt"><a href="../Enums/Response.html">Response</a></span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="p">?,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
     <span class="nv">retryAttempts</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">where</span> <span class="kt">RequestType</span><span class="p">:</span> <span class="kt">Encodable</span><span class="p">,</span> <span class="kt">ResponseType</span><span class="p">:</span> <span class="kt">Decodable</span></code></pre>
 
                         </div>
@@ -520,6 +509,18 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                             <tr>
                               <td>
                                 <code>
+                                <em>requestObject</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>body data to be sent with the request</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
                                 <em>headers</em>
                                 </code>
                               </td>
@@ -532,24 +533,12 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                             <tr>
                               <td>
                                 <code>
-                                <em>success</em>
+                                <em>completionHandler</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The block to be called if request succeeds.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>failure</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The block to be called if request fails.</p>
+                                  <p>the block to be called when the request completes.</p>
                                 </div>
                               </td>
                             </tr>
@@ -578,9 +567,9 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Ness10AppBaseApiC3get9targetUrl7headers7success7failure13retryAttemptsySS_SDyS2SGSgyxSgcys5Error_pcSitSeRzlF"></a>
-                    <a name="//apple_ref/swift/Method/get(targetUrl:headers:success:failure:retryAttempts:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Ness10AppBaseApiC3get9targetUrl7headers7success7failure13retryAttemptsySS_SDyS2SGSgyxSgcys5Error_pcSitSeRzlF">get(targetUrl:headers:success:failure:retryAttempts:)</a>
+                    <a name="/s:4Ness10AppBaseApiC3get9targetUrl7headers17completionHandler13retryAttemptsySS_SDyS2SGSgyAA8ResponseOyxSgs5Error_pGcSitSeRzlF"></a>
+                    <a name="//apple_ref/swift/Method/get(targetUrl:headers:completionHandler:retryAttempts:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Ness10AppBaseApiC3get9targetUrl7headers17completionHandler13retryAttemptsySS_SDyS2SGSgyAA8ResponseOyxSgs5Error_pGcSitSeRzlF">get(targetUrl:headers:completionHandler:retryAttempts:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -595,11 +584,10 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="k">get</span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="o">&gt;</span><span class="p">(</span>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="k">get</span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="o">&gt;</span><span class="p">(</span>
     <span class="nv">targetUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
     <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-    <span class="nv">success</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">ResponseType</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
-    <span class="nv">failure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
+    <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt"><a href="../Enums/Response.html">Response</a></span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="p">?,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
     <span class="nv">retryAttempts</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">where</span> <span class="kt">ResponseType</span><span class="p">:</span> <span class="kt">Decodable</span></code></pre>
 
                         </div>
@@ -635,24 +623,12 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                             <tr>
                               <td>
                                 <code>
-                                <em>success</em>
+                                <em>completionHandler</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The block to be called if request succeeds.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>failure</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The block to be called if request fails.</p>
+                                  <p>the block to be called when the request completes.</p>
                                 </div>
                               </td>
                             </tr>
@@ -681,9 +657,9 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Ness10AppBaseApiC5patch9targetUrl7headers7success7failure13retryAttemptsySS_SDyS2SGSgyxSgcys5Error_pcSitSeRzlF"></a>
-                    <a name="//apple_ref/swift/Method/patch(targetUrl:headers:success:failure:retryAttempts:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Ness10AppBaseApiC5patch9targetUrl7headers7success7failure13retryAttemptsySS_SDyS2SGSgyxSgcys5Error_pcSitSeRzlF">patch(targetUrl:headers:success:failure:retryAttempts:)</a>
+                    <a name="/s:4Ness10AppBaseApiC5patch9targetUrl7headers17completionHandler13retryAttemptsySS_SDyS2SGSgyAA8ResponseOyxSgs5Error_pGcSitSeRzlF"></a>
+                    <a name="//apple_ref/swift/Method/patch(targetUrl:headers:completionHandler:retryAttempts:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Ness10AppBaseApiC5patch9targetUrl7headers17completionHandler13retryAttemptsySS_SDyS2SGSgyAA8ResponseOyxSgs5Error_pGcSitSeRzlF">patch(targetUrl:headers:completionHandler:retryAttempts:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -698,11 +674,10 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">patch</span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="o">&gt;</span><span class="p">(</span>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">patch</span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="o">&gt;</span><span class="p">(</span>
     <span class="nv">targetUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
     <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-    <span class="nv">success</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">ResponseType</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
-    <span class="nv">failure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
+    <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt"><a href="../Enums/Response.html">Response</a></span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="p">?,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
     <span class="nv">retryAttempts</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">where</span> <span class="kt">ResponseType</span><span class="p">:</span> <span class="kt">Decodable</span></code></pre>
 
                         </div>
@@ -738,24 +713,12 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                             <tr>
                               <td>
                                 <code>
-                                <em>success</em>
+                                <em>completionHandler</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The block to be called if request succeeds.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>failure</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The block to be called if request fails.</p>
+                                  <p>the block to be called when the request completes.</p>
                                 </div>
                               </td>
                             </tr>
@@ -780,9 +743,9 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Ness10AppBaseApiC5patch9targetUrl13requestObject7headers7success7failure13retryAttemptsySS_xSDyS2SGSgyq_Sgcys5Error_pcSitSERzSeR_r0_lF"></a>
-                    <a name="//apple_ref/swift/Method/patch(targetUrl:requestObject:headers:success:failure:retryAttempts:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Ness10AppBaseApiC5patch9targetUrl13requestObject7headers7success7failure13retryAttemptsySS_xSDyS2SGSgyq_Sgcys5Error_pcSitSERzSeR_r0_lF">patch(targetUrl:requestObject:headers:success:failure:retryAttempts:)</a>
+                    <a name="/s:4Ness10AppBaseApiC5patch9targetUrl13requestObject7headers17completionHandler13retryAttemptsySS_xSDyS2SGSgyAA8ResponseOyq_Sgs5Error_pGcSitSERzSeR_r0_lF"></a>
+                    <a name="//apple_ref/swift/Method/patch(targetUrl:requestObject:headers:completionHandler:retryAttempts:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Ness10AppBaseApiC5patch9targetUrl13requestObject7headers17completionHandler13retryAttemptsySS_xSDyS2SGSgyAA8ResponseOyq_Sgs5Error_pGcSitSERzSeR_r0_lF">patch(targetUrl:requestObject:headers:completionHandler:retryAttempts:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -792,21 +755,16 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                       <div class="abstract">
                         <p>Performs a <code>patch</code> request with <code>requestObject</code> as body.</p>
 
-<ul>
-<li><p>requestObject: body data to be sent with the request</p></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">patch</span><span class="o">&lt;</span><span class="kt">RequestType</span><span class="p">,</span> <span class="kt">ResponseType</span><span class="o">&gt;</span><span class="p">(</span>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">patch</span><span class="o">&lt;</span><span class="kt">RequestType</span><span class="p">,</span> <span class="kt">ResponseType</span><span class="o">&gt;</span><span class="p">(</span>
     <span class="nv">targetUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
     <span class="nv">requestObject</span><span class="p">:</span> <span class="kt">RequestType</span><span class="p">,</span>
     <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-    <span class="nv">success</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">ResponseType</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
-    <span class="nv">failure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
+    <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt"><a href="../Enums/Response.html">Response</a></span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="p">?,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
     <span class="nv">retryAttempts</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">where</span> <span class="kt">RequestType</span><span class="p">:</span> <span class="kt">Encodable</span><span class="p">,</span> <span class="kt">ResponseType</span><span class="p">:</span> <span class="kt">Decodable</span></code></pre>
 
                         </div>
@@ -830,6 +788,18 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                             <tr>
                               <td>
                                 <code>
+                                <em>requestObject</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>body data to be sent with the request</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
                                 <em>headers</em>
                                 </code>
                               </td>
@@ -842,24 +812,12 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                             <tr>
                               <td>
                                 <code>
-                                <em>success</em>
+                                <em>completionHandler</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The block to be called if request succeeds.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>failure</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The block to be called if request fails.</p>
+                                  <p>the block to be called when the request completes.</p>
                                 </div>
                               </td>
                             </tr>
@@ -888,9 +846,9 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Ness10AppBaseApiC4post9targetUrl7headers7success7failure13retryAttemptsySS_SDyS2SGSgyxSgcys5Error_pcSitSeRzlF"></a>
-                    <a name="//apple_ref/swift/Method/post(targetUrl:headers:success:failure:retryAttempts:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Ness10AppBaseApiC4post9targetUrl7headers7success7failure13retryAttemptsySS_SDyS2SGSgyxSgcys5Error_pcSitSeRzlF">post(targetUrl:headers:success:failure:retryAttempts:)</a>
+                    <a name="/s:4Ness10AppBaseApiC4post9targetUrl7headers17completionHandler13retryAttemptsySS_SDyS2SGSgyAA8ResponseOyxSgs5Error_pGcSitSeRzlF"></a>
+                    <a name="//apple_ref/swift/Method/post(targetUrl:headers:completionHandler:retryAttempts:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Ness10AppBaseApiC4post9targetUrl7headers17completionHandler13retryAttemptsySS_SDyS2SGSgyAA8ResponseOyxSgs5Error_pGcSitSeRzlF">post(targetUrl:headers:completionHandler:retryAttempts:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -905,11 +863,10 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">post</span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="o">&gt;</span><span class="p">(</span>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">post</span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="o">&gt;</span><span class="p">(</span>
     <span class="nv">targetUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
     <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-    <span class="nv">success</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">ResponseType</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
-    <span class="nv">failure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
+    <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt"><a href="../Enums/Response.html">Response</a></span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="p">?,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
     <span class="nv">retryAttempts</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">where</span> <span class="kt">ResponseType</span><span class="p">:</span> <span class="kt">Decodable</span></code></pre>
 
                         </div>
@@ -945,24 +902,12 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                             <tr>
                               <td>
                                 <code>
-                                <em>success</em>
+                                <em>completionHandler</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The block to be called if request succeeds.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>failure</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The block to be called if request fails.</p>
+                                  <p>the block to be called when the request completes.</p>
                                 </div>
                               </td>
                             </tr>
@@ -987,9 +932,9 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Ness10AppBaseApiC4post9targetUrl13requestObject7headers7success7failure13retryAttemptsySS_xSDyS2SGSgyq_Sgcys5Error_pcSitSERzSeR_r0_lF"></a>
-                    <a name="//apple_ref/swift/Method/post(targetUrl:requestObject:headers:success:failure:retryAttempts:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Ness10AppBaseApiC4post9targetUrl13requestObject7headers7success7failure13retryAttemptsySS_xSDyS2SGSgyq_Sgcys5Error_pcSitSERzSeR_r0_lF">post(targetUrl:requestObject:headers:success:failure:retryAttempts:)</a>
+                    <a name="/s:4Ness10AppBaseApiC4post9targetUrl13requestObject7headers17completionHandler13retryAttemptsySS_xSDyS2SGSgyAA8ResponseOyq_Sgs5Error_pGcSitSERzSeR_r0_lF"></a>
+                    <a name="//apple_ref/swift/Method/post(targetUrl:requestObject:headers:completionHandler:retryAttempts:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Ness10AppBaseApiC4post9targetUrl13requestObject7headers17completionHandler13retryAttemptsySS_xSDyS2SGSgyAA8ResponseOyq_Sgs5Error_pGcSitSERzSeR_r0_lF">post(targetUrl:requestObject:headers:completionHandler:retryAttempts:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -999,21 +944,16 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                       <div class="abstract">
                         <p>Performs a <code>post</code> request with <code>requestObject</code> as body.</p>
 
-<ul>
-<li><p>requestObject: body data to be sent with the request</p></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">post</span><span class="o">&lt;</span><span class="kt">RequestType</span><span class="p">,</span> <span class="kt">ResponseType</span><span class="o">&gt;</span><span class="p">(</span>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">post</span><span class="o">&lt;</span><span class="kt">RequestType</span><span class="p">,</span> <span class="kt">ResponseType</span><span class="o">&gt;</span><span class="p">(</span>
     <span class="nv">targetUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
     <span class="nv">requestObject</span><span class="p">:</span> <span class="kt">RequestType</span><span class="p">,</span>
     <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-    <span class="nv">success</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">ResponseType</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
-    <span class="nv">failure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
+    <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt"><a href="../Enums/Response.html">Response</a></span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="p">?,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
     <span class="nv">retryAttempts</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">where</span> <span class="kt">RequestType</span><span class="p">:</span> <span class="kt">Encodable</span><span class="p">,</span> <span class="kt">ResponseType</span><span class="p">:</span> <span class="kt">Decodable</span></code></pre>
 
                         </div>
@@ -1037,6 +977,18 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                             <tr>
                               <td>
                                 <code>
+                                <em>requestObject</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>body data to be sent with the request</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
                                 <em>headers</em>
                                 </code>
                               </td>
@@ -1049,24 +1001,12 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                             <tr>
                               <td>
                                 <code>
-                                <em>success</em>
+                                <em>completionHandler</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The block to be called if request succeeds.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>failure</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The block to be called if request fails.</p>
+                                  <p>the block to be called when the request completes.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1095,9 +1035,9 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Ness10AppBaseApiC3put9targetUrl7headers7success7failure13retryAttemptsySS_SDyS2SGSgyxSgcys5Error_pcSitSeRzlF"></a>
-                    <a name="//apple_ref/swift/Method/put(targetUrl:headers:success:failure:retryAttempts:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Ness10AppBaseApiC3put9targetUrl7headers7success7failure13retryAttemptsySS_SDyS2SGSgyxSgcys5Error_pcSitSeRzlF">put(targetUrl:headers:success:failure:retryAttempts:)</a>
+                    <a name="/s:4Ness10AppBaseApiC3put9targetUrl7headers17completionHandler13retryAttemptsySS_SDyS2SGSgyAA8ResponseOyxSgs5Error_pGcSitSeRzlF"></a>
+                    <a name="//apple_ref/swift/Method/put(targetUrl:headers:completionHandler:retryAttempts:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Ness10AppBaseApiC3put9targetUrl7headers17completionHandler13retryAttemptsySS_SDyS2SGSgyAA8ResponseOyxSgs5Error_pGcSitSeRzlF">put(targetUrl:headers:completionHandler:retryAttempts:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1112,11 +1052,10 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">put</span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="o">&gt;</span><span class="p">(</span>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">put</span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="o">&gt;</span><span class="p">(</span>
     <span class="nv">targetUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
     <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-    <span class="nv">success</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">ResponseType</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
-    <span class="nv">failure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
+    <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt"><a href="../Enums/Response.html">Response</a></span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="p">?,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
     <span class="nv">retryAttempts</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">where</span> <span class="kt">ResponseType</span><span class="p">:</span> <span class="kt">Decodable</span></code></pre>
 
                         </div>
@@ -1152,24 +1091,12 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                             <tr>
                               <td>
                                 <code>
-                                <em>success</em>
+                                <em>completionHandler</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The block to be called if request succeeds.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>failure</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The block to be called if request fails.</p>
+                                  <p>the block to be called when the request completes.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1194,9 +1121,9 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Ness10AppBaseApiC3put9targetUrl13requestObject7headers7success7failure13retryAttemptsySS_xSDyS2SGSgyq_Sgcys5Error_pcSitSERzSeR_r0_lF"></a>
-                    <a name="//apple_ref/swift/Method/put(targetUrl:requestObject:headers:success:failure:retryAttempts:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Ness10AppBaseApiC3put9targetUrl13requestObject7headers7success7failure13retryAttemptsySS_xSDyS2SGSgyq_Sgcys5Error_pcSitSERzSeR_r0_lF">put(targetUrl:requestObject:headers:success:failure:retryAttempts:)</a>
+                    <a name="/s:4Ness10AppBaseApiC3put9targetUrl13requestObject7headers17completionHandler13retryAttemptsySS_xSDyS2SGSgyAA8ResponseOyq_Sgs5Error_pGcSitSERzSeR_r0_lF"></a>
+                    <a name="//apple_ref/swift/Method/put(targetUrl:requestObject:headers:completionHandler:retryAttempts:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Ness10AppBaseApiC3put9targetUrl13requestObject7headers17completionHandler13retryAttemptsySS_xSDyS2SGSgyAA8ResponseOyq_Sgs5Error_pGcSitSERzSeR_r0_lF">put(targetUrl:requestObject:headers:completionHandler:retryAttempts:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1206,21 +1133,16 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                       <div class="abstract">
                         <p>Performs a <code>put</code> request with <code>requestObject</code> as body.</p>
 
-<ul>
-<li><p>requestObject: body data to be sent with the request</p></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">put</span><span class="o">&lt;</span><span class="kt">RequestType</span><span class="p">,</span> <span class="kt">ResponseType</span><span class="o">&gt;</span><span class="p">(</span>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">put</span><span class="o">&lt;</span><span class="kt">RequestType</span><span class="p">,</span> <span class="kt">ResponseType</span><span class="o">&gt;</span><span class="p">(</span>
     <span class="nv">targetUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
     <span class="nv">requestObject</span><span class="p">:</span> <span class="kt">RequestType</span><span class="p">,</span>
     <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-    <span class="nv">success</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">ResponseType</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
-    <span class="nv">failure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
+    <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt"><a href="../Enums/Response.html">Response</a></span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="p">?,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span>
     <span class="nv">retryAttempts</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">where</span> <span class="kt">RequestType</span><span class="p">:</span> <span class="kt">Encodable</span><span class="p">,</span> <span class="kt">ResponseType</span><span class="p">:</span> <span class="kt">Decodable</span></code></pre>
 
                         </div>
@@ -1244,6 +1166,18 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                             <tr>
                               <td>
                                 <code>
+                                <em>requestObject</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>body data to be sent with the request</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
                                 <em>headers</em>
                                 </code>
                               </td>
@@ -1256,24 +1190,12 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
                             <tr>
                               <td>
                                 <code>
-                                <em>success</em>
+                                <em>completionHandler</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The block to be called if request succeeds.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>failure</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The block to be called if request fails.</p>
+                                  <p>the block to be called when the request completes.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1300,7 +1222,7 @@ If the request fails, the &lsquo;errorHandler&rsquo; block will be called instea
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-11-15)</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-01-16)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
