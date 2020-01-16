@@ -61,12 +61,15 @@ class AppBaseApiGetSpec: QuickSpec {
                         api.get(
                             targetUrl: targetUrl,
                             headers: nil,
-                            success: { (response: PersonResponse?) in
-                                personResponse = response
-                                done()
-                        }, failure: { _ in
-                            fail("Mocked response returned error")
-                            done()
+                            completionHandler: { (response: Response<PersonResponse?, Error>) in
+                                switch response {
+                                case .success(let response):
+                                    personResponse = response
+                                    done()
+                                case .failure(let error):
+                                    fail("Mocked response returned error - \(error)")
+                                    done()
+                                }
                         }, retryAttempts: 30)
                     }
                     
@@ -110,15 +113,18 @@ class AppBaseApiGetSpec: QuickSpec {
                         api.get(
                             targetUrl: targetUrl,
                             headers: headers,
-                            success: { (response: PersonResponse?) in
-                                personResponse = response
-                                done()
-                        }, failure: { _ in
-                            fail("Mocked response returned error")
-                            done()
+                            completionHandler: { (response: Response<PersonResponse?, Error>) in
+                                switch response {
+                                case .success(let response):
+                                    personResponse = response
+                                    done()
+                                case .failure(let error):
+                                    fail("Mocked response returned error - \(error)")
+                                    done()
+                                }
                         }, retryAttempts: 30)
                     }
-                    
+
                     // Then
                     expect(personResponse?["data"]?.count).to(equal(3))
                     
@@ -151,15 +157,18 @@ class AppBaseApiGetSpec: QuickSpec {
                         api.get(
                             targetUrl: targetUrl,
                             headers: nil,
-                            success: { (response: PersonResponse?) in
-                                fail("Mocked response returned success")
-                                personResponse = response
-                                done()
-                        }, failure: { _ in
-                            done()
+                            completionHandler: { (response: Response<PersonResponse?, Error>) in
+                                switch response {
+                                case .success(let response):
+                                    fail("Mocked response returned success")
+                                    personResponse = response
+                                    done()
+                                case .failure(_):
+                                    done()
+                                }
                         }, retryAttempts: 30)
                     }
-                    
+
                     // Then
                     expect(personResponse).to(beNil())
                 }

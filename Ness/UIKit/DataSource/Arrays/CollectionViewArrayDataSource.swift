@@ -120,7 +120,9 @@ open class CollectionViewArrayDataSource<CellType: UICollectionViewCell, Type: E
     ///
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let reuseIdentifier = self.reuseIdentifier(indexPath)
-        guard var cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? CellType else { return UICollectionViewCell() }
+        guard var cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? CellType else {
+            fatalError("Cell with reuse identifier \"\(reuseIdentifier)\" not found.")
+        }
 
         if let value = self.dataProvider[indexPath] as? CellType.ValueType {
             self.prepareCellBlock?(cell)

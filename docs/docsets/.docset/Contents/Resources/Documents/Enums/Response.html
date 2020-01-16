@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>NSObject Extension Reference</title>
+    <title>Response Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Extension/NSObject" class="dashAnchor"></a>
-    <a title="NSObject Extension Reference"></a>
+    <a name="//apple_ref/swift/Enum/Response" class="dashAnchor"></a>
+    <a title="Response Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a> (97% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        NSObject Extension Reference
+        Response Enumeration Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -132,14 +132,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>NSObject</h1>
+            <h1>Response</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">NSObject</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Response</span><span class="o">&lt;</span><span class="kt">Success</span><span class="p">,</span> <span class="kt">Failure</span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
-            <p>Adds useful capabilities to NSObject.</p>
+            <p>Undocumented</p>
 
           </section>
           <section class="section task-group-section">
@@ -148,9 +148,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So8NSObjectC4NessE15simpleClassNameSSyFZ"></a>
-                    <a name="//apple_ref/swift/Method/simpleClassName()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So8NSObjectC4NessE15simpleClassNameSSyFZ">simpleClassName()</a>
+                    <a name="/s:4Ness8ResponseO7successyACyxq_GxcAEmr0_lF"></a>
+                    <a name="//apple_ref/swift/Element/success(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Ness8ResponseO7successyACyxq_GxcAEmr0_lF">success(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -158,25 +158,43 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Extracts the simple class name of a given type.
-As in Swift the types names are composed with the modules they are located,
-this method extracts the type name without the module name.</p>
-<h3 id='usage-example' class='heading'>Usage Example:</h3>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">""</span><span class="o">.</span><span class="nf">simpleClassName</span><span class="p">()</span> <span class="c1">// returns "NSString"</span>
-</code></pre>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">simpleClassName</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">success</span><span class="p">(</span><span class="kt">Success</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>The simple class name of the type</p>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Ness8ResponseO7failureyACyxq_Gq_cAEmr0_lF"></a>
+                    <a name="//apple_ref/swift/Element/failure(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Ness8ResponseO7failureyACyxq_Gq_cAEmr0_lF">failure(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">failure</span><span class="p">(</span><span class="kt">Failure</span><span class="p">)</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>

@@ -31,25 +31,21 @@ public extension AppBaseApi {
     ///
     /// - parameter headers: Http Headers to be sent with the request.
     ///
-    /// - parameter success: The block to be called if request succeeds.
-    ///
-    /// - parameter failure: The block to be called if request fails.
+    /// - parameter completionHandler: the block to be called when the request completes.
     ///
     /// - parameter retryAttempts: How many tries before calling `errorHandler` block.
     ///
-    public func patch<ResponseType>(
+    func patch<ResponseType>(
         targetUrl: String,
         headers: [String: String]? = nil,
-        success: @escaping ((ResponseType?) -> Void),
-        failure: @escaping ((Error) -> Void),
+        completionHandler: @escaping ((Response<ResponseType?, Error>) -> Void),
         retryAttempts: Int) where ResponseType: Decodable {
 
         executeRequest(httpMethod: .patch,
                        targetUrl: targetUrl,
                        requestObject: EmptyRequest(),
                        headers: headers,
-                       success: success,
-                       failure: failure,
+                       completionHandler: completionHandler,
                        retryAttempts: retryAttempts)
 
     }
@@ -60,30 +56,26 @@ public extension AppBaseApi {
     ///
     /// - parameter targetUrl: The request path.
     ///
-    /// - requestObject: body data to be sent with the request
+    /// - parameter requestObject: body data to be sent with the request
     ///
     /// - parameter headers: Http Headers to be sent with the request.
     ///
-    /// - parameter success: The block to be called if request succeeds.
-    ///
-    /// - parameter failure: The block to be called if request fails.
+    /// - parameter completionHandler: the block to be called when the request completes.
     ///
     /// - parameter retryAttempts: How many tries before calling `errorHandler` block.
     ///
-    public func patch<RequestType, ResponseType>(
+    func patch<RequestType, ResponseType>(
         targetUrl: String,
         requestObject: RequestType,
         headers: [String: String]? = nil,
-        success: @escaping ((ResponseType?) -> Void),
-        failure: @escaping ((Error) -> Void),
+        completionHandler: @escaping ((Response<ResponseType?, Error>) -> Void),
         retryAttempts: Int) where RequestType: Encodable, ResponseType: Decodable {
 
         executeRequest(httpMethod: .patch,
                        targetUrl: targetUrl,
                        requestObject: requestObject,
                        headers: headers,
-                       success: success,
-                       failure: failure,
+                       completionHandler: completionHandler,
                        retryAttempts: retryAttempts)
 
     }

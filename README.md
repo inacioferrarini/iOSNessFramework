@@ -14,7 +14,7 @@ Ness Framework
 ## Requirements
 
 - iOS 9.0+
-- Xcode 10.0+
+- Xcode 10.3+
 
 ## Usage
 

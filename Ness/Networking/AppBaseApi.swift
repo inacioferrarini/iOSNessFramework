@@ -92,9 +92,7 @@ open class AppBaseApi {
     ///
     /// - parameter headers: Http Headers to be sent with the request.
     ///
-    /// - parameter success: The block to be called if request succeeds.
-    ///
-    /// - parameter failure: The block to be called if request fails.
+    /// - parameter completionHandler: the block to be called when the request completes.
     ///
     /// - parameter retryAttempts: How many tries before calling `errorHandler` block.
     ///
@@ -104,8 +102,7 @@ open class AppBaseApi {
         targetUrl: String,
         requestObject: RequestType? = nil,
         headers: [String: String]? = nil,
-        success: @escaping ((ResponseType?) -> Void),
-        failure: @escaping ((Error) -> Void),
+        completionHandler: @escaping ((Response<ResponseType?, Error>) -> Void),
         retryAttempts: Int) where RequestType: Encodable, ResponseType: Decodable {
 
         let endpointUrl = endpointUrl ?? self.rootUrl
@@ -113,23 +110,22 @@ open class AppBaseApi {
         let defaultSession = URLSession(configuration: URLSessionConfiguration.default)
         guard let url = URL(string: urlString) else { return }
 
-        let request = self.request(httpMethod: httpMethod,
-                                   url: url,
-                                   requestObject: requestObject,
-                                   headers: headers)
+        let requestBody = self.requestBody(httpMethod: httpMethod,
+                                           url: url,
+                                           requestObject: requestObject,
+                                           headers: headers)
 
-        let dataTask = defaultSession.dataTask(with: request) { (data, _, error) in
+        let dataTask = defaultSession.dataTask(with: requestBody) { (data, _, error) in
             if let error = error {
                 if retryAttempts <= 1 {
-                    failure(error)
+                    completionHandler(.failure(error))
                 } else {
                     self.executeRequest(httpMethod: httpMethod,
                                         endpointUrl,
                                         targetUrl: targetUrl,
                                         requestObject: requestObject,
                                         headers: headers,
-                                        success: success,
-                                        failure: failure,
+                                        completionHandler: completionHandler,
                                         retryAttempts: retryAttempts - 1)
                 }
             } else {
@@ -138,7 +134,7 @@ open class AppBaseApi {
                     response <-- data
                 }
                 DispatchQueue.main.async {
-                    success(response)
+                    completionHandler(.success(response))
                 }
             }
         }
@@ -153,30 +149,30 @@ open class AppBaseApi {
     ///
     /// - parameter url: The url request.
     ///
-    /// - parameter parameters: Parameters to be sent with the request.
+    /// - parameter requestObject: Request object with values to be used as body.
     ///
     /// - parameter headers: Http Headers to be sent with the request.
     ///
-    func request<RequestType>(
+    func requestBody<RequestType>(
         httpMethod: HttpMethod,
         url: URL,
         requestObject: RequestType? = nil,
         headers: [String: String]? = nil) -> URLRequest where RequestType: Encodable {
 
-        var request = URLRequest(url: url)
-        request.httpMethod = httpMethod.rawValue
+        var requestBody = URLRequest(url: url)
+        requestBody.httpMethod = httpMethod.rawValue
 
         var data: Data = Data()
         data <-- requestObject
-        request.httpBody = data
+        requestBody.httpBody = data
 
         if let headers = headers {
             for headerField in headers.keys {
                 guard let value = headers[headerField] else { continue }
-                request.addValue(value, forHTTPHeaderField: headerField)
+                requestBody.addValue(value, forHTTPHeaderField: headerField)
             }
         }
-        return request
+        return requestBody
     }
 
 }
