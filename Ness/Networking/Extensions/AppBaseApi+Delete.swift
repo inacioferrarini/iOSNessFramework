@@ -35,7 +35,7 @@ public extension AppBaseApi {
     ///
     /// - parameter retryAttempts: How many tries before calling `errorHandler` block.
     ///
-    public func delete<ResponseType>(
+    func delete<ResponseType>(
         targetUrl: String,
         headers: [String: String]? = nil,
         completionHandler: @escaping ((Response<ResponseType?, Error>) -> Void),
@@ -64,7 +64,7 @@ public extension AppBaseApi {
     ///
     /// - parameter retryAttempts: How many tries before calling `errorHandler` block.
     ///
-    public func delete<RequestType, ResponseType>(
+    func delete<RequestType, ResponseType>(
         targetUrl: String,
         requestObject: RequestType,
         headers: [String: String]? = nil,
