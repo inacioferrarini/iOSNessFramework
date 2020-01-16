@@ -120,7 +120,9 @@ open class TableViewArrayDataSource<CellType: UITableViewCell, Type: Equatable>:
     ///
     open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reuseIdentifier = self.reuseIdentifier(indexPath)
-        guard var cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? CellType else { return UITableViewCell() }
+        guard var cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? CellType else {
+            fatalError("Cell with reuse identifier \"\(reuseIdentifier)\" not found.")
+        }
 
         if let value = self.dataProvider[indexPath] as? CellType.ValueType {
             self.prepareCellBlock?(cell)
