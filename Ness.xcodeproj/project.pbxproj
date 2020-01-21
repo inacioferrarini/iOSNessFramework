@@ -27,21 +27,10 @@
 		BB19CFC7233DB347000BEBA1 /* PageLoaderTableViewDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CFC6233DB347000BEBA1 /* PageLoaderTableViewDelegateSpec.swift */; };
 		BB19CFC9233DB38C000BEBA1 /* PageLoaderCollectionViewDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19CFC8233DB38C000BEBA1 /* PageLoaderCollectionViewDelegateSpec.swift */; };
 		BB3435EA234EA93300853DE3 /* AppContextAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3435E9234EA93300853DE3 /* AppContextAware.swift */; };
-		BB4EA92D23414EC600B60696 /* AppBaseApi+Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4EA92C23414EC600B60696 /* AppBaseApi+Get.swift */; };
-		BB4EA93123414EF400B60696 /* AppBaseApi+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4EA93023414EF400B60696 /* AppBaseApi+Post.swift */; };
-		BB4EA93323414F0000B60696 /* AppBaseApi+Patch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4EA93223414F0000B60696 /* AppBaseApi+Patch.swift */; };
-		BB4EA93523414F0B00B60696 /* AppBaseApi+Put.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4EA93423414F0B00B60696 /* AppBaseApi+Put.swift */; };
-		BB4EA93723414F1500B60696 /* AppBaseApi+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4EA93623414F1500B60696 /* AppBaseApi+Delete.swift */; };
-		BB4EA93A234154DB00B60696 /* AppBaseApi+GetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4EA939234154DB00B60696 /* AppBaseApi+GetSpec.swift */; };
-		BB4EA93C234154F800B60696 /* AppBaseApi+DeleteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4EA93B234154F800B60696 /* AppBaseApi+DeleteSpec.swift */; };
-		BB4EA93E2341550700B60696 /* AppBaseApi+PatchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4EA93D2341550700B60696 /* AppBaseApi+PatchSpec.swift */; };
-		BB4EA9402341551500B60696 /* AppBaseApi+PostSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4EA93F2341551500B60696 /* AppBaseApi+PostSpec.swift */; };
-		BB4EA9422341552100B60696 /* AppBaseApi+PutSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4EA9412341552100B60696 /* AppBaseApi+PutSpec.swift */; };
 		BB58BF4D232E6AD000A13142 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB58BF4B232E6AD000A13142 /* Quick.framework */; };
 		BB58BF4E232E6AD000A13142 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB58BF4C232E6AD000A13142 /* Nimble.framework */; };
 		BB58BF52232E6BBC00A13142 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BB58BF4C232E6AD000A13142 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BB58BF53232E6BBC00A13142 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BB58BF4B232E6AD000A13142 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BB75E4B92393E3A700AEE851 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75E4B82393E3A700AEE851 /* Response.swift */; };
 		BBBC1527233D61F700467BD4 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1505233D61F600467BD4 /* Configurable.swift */; };
 		BBBC1528233D61F700467BD4 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC1507233D61F600467BD4 /* NSObject+Extensions.swift */; };
 		BBBC1529233D61F700467BD4 /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC150B233D61F600467BD4 /* CoreDataProvider.swift */; };
@@ -72,29 +61,8 @@
 		BBBE70F42368FFFD0099D44D /* NonLocalizedStringsSpec.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBBE70F32368FFFD0099D44D /* NonLocalizedStringsSpec.strings */; };
 		BBD509212337E2E5009CA4EE /* Ness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD509172337E2E4009CA4EE /* Ness.framework */; };
 		BBD509282337E2E5009CA4EE /* Ness.h in Headers */ = {isa = PBXBuildFile; fileRef = BBD5091A2337E2E4009CA4EE /* Ness.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BBEBC504234024D20020CC25 /* Operators+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBC503234024D20020CC25 /* Operators+Decodable.swift */; };
-		BBEBC50723402D110020CC25 /* Operators+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBC50623402D110020CC25 /* Operators+Encodable.swift */; };
-		BBEBC50923402D440020CC25 /* Operators+EncodableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBC50823402D440020CC25 /* Operators+EncodableSpec.swift */; };
-		BBEBC50B23402D540020CC25 /* Operators+DecodableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBC50A23402D540020CC25 /* Operators+DecodableSpec.swift */; };
-		BBEBC50E2340305D0020CC25 /* FixtureHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBC50D2340305D0020CC25 /* FixtureHelper.swift */; };
-		BBEBC5122340318E0020CC25 /* Person.json in Resources */ = {isa = PBXBuildFile; fileRef = BBEBC5102340318E0020CC25 /* Person.json */; };
-		BBEBC5132340318E0020CC25 /* PersonArray.json in Resources */ = {isa = PBXBuildFile; fileRef = BBEBC5112340318E0020CC25 /* PersonArray.json */; };
-		BBEBC516234031E00020CC25 /* UnparseablePerson.json in Resources */ = {isa = PBXBuildFile; fileRef = BBEBC514234031E00020CC25 /* UnparseablePerson.json */; };
-		BBEBC517234031E00020CC25 /* UnparseablePersonArray.json in Resources */ = {isa = PBXBuildFile; fileRef = BBEBC515234031E00020CC25 /* UnparseablePersonArray.json */; };
-		BBEBC51A234033AC0020CC25 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBC519234033AC0020CC25 /* Person.swift */; };
-		BBEBC51D23403EAC0020CC25 /* AppBaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBC51C23403EAC0020CC25 /* AppBaseApi.swift */; };
-		BBEBC51F234055330020CC25 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBC51E234055330020CC25 /* Operators.swift */; };
-		BBEBC5222340631F0020CC25 /* AppBaseApiSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBC5212340631F0020CC25 /* AppBaseApiSpec.swift */; };
-		BBEBC529234065840020CC25 /* ApiPutRequestResponseFixture.json in Resources */ = {isa = PBXBuildFile; fileRef = BBEBC524234065830020CC25 /* ApiPutRequestResponseFixture.json */; };
-		BBEBC52A234065840020CC25 /* ApiPatchRequestResponseFixture.json in Resources */ = {isa = PBXBuildFile; fileRef = BBEBC525234065830020CC25 /* ApiPatchRequestResponseFixture.json */; };
-		BBEBC52B234065840020CC25 /* ApiPostRequestResponseFixture.json in Resources */ = {isa = PBXBuildFile; fileRef = BBEBC526234065830020CC25 /* ApiPostRequestResponseFixture.json */; };
-		BBEBC52C234065840020CC25 /* ApiGetRequestResponseFixture.json in Resources */ = {isa = PBXBuildFile; fileRef = BBEBC527234065840020CC25 /* ApiGetRequestResponseFixture.json */; };
-		BBEBC52D234065840020CC25 /* ApiDeleteRequestResponseFixture.json in Resources */ = {isa = PBXBuildFile; fileRef = BBEBC528234065840020CC25 /* ApiDeleteRequestResponseFixture.json */; };
 		BBEBC52F234068DC0020CC25 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEBC52E234068DC0020CC25 /* OHHTTPStubs.framework */; };
 		BBEBC530234068F80020CC25 /* OHHTTPStubs.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBEBC52E234068DC0020CC25 /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BBEBC53523406ECE0020CC25 /* PersonRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBC53423406ECE0020CC25 /* PersonRequest.swift */; };
-		BBEBC53723406ED90020CC25 /* PersonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBC53623406ED90020CC25 /* PersonResponse.swift */; };
-		BBEBC54E234103150020CC25 /* EmptyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEBC54D234103150020CC25 /* EmptyRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,19 +111,8 @@
 		BB19CFC6233DB347000BEBA1 /* PageLoaderTableViewDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageLoaderTableViewDelegateSpec.swift; sourceTree = "<group>"; };
 		BB19CFC8233DB38C000BEBA1 /* PageLoaderCollectionViewDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageLoaderCollectionViewDelegateSpec.swift; sourceTree = "<group>"; };
 		BB3435E9234EA93300853DE3 /* AppContextAware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContextAware.swift; sourceTree = "<group>"; };
-		BB4EA92C23414EC600B60696 /* AppBaseApi+Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBaseApi+Get.swift"; sourceTree = "<group>"; };
-		BB4EA93023414EF400B60696 /* AppBaseApi+Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBaseApi+Post.swift"; sourceTree = "<group>"; };
-		BB4EA93223414F0000B60696 /* AppBaseApi+Patch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBaseApi+Patch.swift"; sourceTree = "<group>"; };
-		BB4EA93423414F0B00B60696 /* AppBaseApi+Put.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBaseApi+Put.swift"; sourceTree = "<group>"; };
-		BB4EA93623414F1500B60696 /* AppBaseApi+Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBaseApi+Delete.swift"; sourceTree = "<group>"; };
-		BB4EA939234154DB00B60696 /* AppBaseApi+GetSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBaseApi+GetSpec.swift"; sourceTree = "<group>"; };
-		BB4EA93B234154F800B60696 /* AppBaseApi+DeleteSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBaseApi+DeleteSpec.swift"; sourceTree = "<group>"; };
-		BB4EA93D2341550700B60696 /* AppBaseApi+PatchSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBaseApi+PatchSpec.swift"; sourceTree = "<group>"; };
-		BB4EA93F2341551500B60696 /* AppBaseApi+PostSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBaseApi+PostSpec.swift"; sourceTree = "<group>"; };
-		BB4EA9412341552100B60696 /* AppBaseApi+PutSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBaseApi+PutSpec.swift"; sourceTree = "<group>"; };
 		BB58BF4B232E6AD000A13142 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		BB58BF4C232E6AD000A13142 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		BB75E4B82393E3A700AEE851 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		BBBC1505233D61F600467BD4 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		BBBC1507233D61F600467BD4 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
 		BBBC150B233D61F600467BD4 /* CoreDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
@@ -190,29 +147,8 @@
 		BBD5091B2337E2E4009CA4EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBD509202337E2E5009CA4EE /* NessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD509272337E2E5009CA4EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BBEBC503234024D20020CC25 /* Operators+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Operators+Decodable.swift"; sourceTree = "<group>"; };
-		BBEBC50623402D110020CC25 /* Operators+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Operators+Encodable.swift"; sourceTree = "<group>"; };
-		BBEBC50823402D440020CC25 /* Operators+EncodableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Operators+EncodableSpec.swift"; sourceTree = "<group>"; };
-		BBEBC50A23402D540020CC25 /* Operators+DecodableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Operators+DecodableSpec.swift"; sourceTree = "<group>"; };
-		BBEBC50D2340305D0020CC25 /* FixtureHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureHelper.swift; sourceTree = "<group>"; };
-		BBEBC5102340318E0020CC25 /* Person.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Person.json; sourceTree = "<group>"; };
-		BBEBC5112340318E0020CC25 /* PersonArray.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PersonArray.json; sourceTree = "<group>"; };
-		BBEBC514234031E00020CC25 /* UnparseablePerson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UnparseablePerson.json; sourceTree = "<group>"; };
-		BBEBC515234031E00020CC25 /* UnparseablePersonArray.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UnparseablePersonArray.json; sourceTree = "<group>"; };
-		BBEBC519234033AC0020CC25 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		BBEBC51C23403EAC0020CC25 /* AppBaseApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBaseApi.swift; sourceTree = "<group>"; };
-		BBEBC51E234055330020CC25 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
-		BBEBC5212340631F0020CC25 /* AppBaseApiSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBaseApiSpec.swift; sourceTree = "<group>"; };
-		BBEBC524234065830020CC25 /* ApiPutRequestResponseFixture.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ApiPutRequestResponseFixture.json; sourceTree = "<group>"; };
-		BBEBC525234065830020CC25 /* ApiPatchRequestResponseFixture.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ApiPatchRequestResponseFixture.json; sourceTree = "<group>"; };
-		BBEBC526234065830020CC25 /* ApiPostRequestResponseFixture.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ApiPostRequestResponseFixture.json; sourceTree = "<group>"; };
-		BBEBC527234065840020CC25 /* ApiGetRequestResponseFixture.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ApiGetRequestResponseFixture.json; sourceTree = "<group>"; };
-		BBEBC528234065840020CC25 /* ApiDeleteRequestResponseFixture.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ApiDeleteRequestResponseFixture.json; sourceTree = "<group>"; };
 		BBEBC52E234068DC0020CC25 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		BBEBC5312340692E0020CC25 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/TestClass.strings"; sourceTree = "<group>"; };
-		BBEBC53423406ECE0020CC25 /* PersonRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRequest.swift; sourceTree = "<group>"; };
-		BBEBC53623406ED90020CC25 /* PersonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonResponse.swift; sourceTree = "<group>"; };
-		BBEBC54D234103150020CC25 /* EmptyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,38 +286,6 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
-		BB4EA92E23414ECA00B60696 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				BB4EA92C23414EC600B60696 /* AppBaseApi+Get.swift */,
-				BB4EA93623414F1500B60696 /* AppBaseApi+Delete.swift */,
-				BB4EA93223414F0000B60696 /* AppBaseApi+Patch.swift */,
-				BB4EA93023414EF400B60696 /* AppBaseApi+Post.swift */,
-				BB4EA93423414F0B00B60696 /* AppBaseApi+Put.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		BB4EA92F23414ED600B60696 /* Requests */ = {
-			isa = PBXGroup;
-			children = (
-				BBEBC54D234103150020CC25 /* EmptyRequest.swift */,
-			);
-			path = Requests;
-			sourceTree = "<group>";
-		};
-		BB4EA938234154BA00B60696 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				BB4EA939234154DB00B60696 /* AppBaseApi+GetSpec.swift */,
-				BB4EA93B234154F800B60696 /* AppBaseApi+DeleteSpec.swift */,
-				BB4EA93D2341550700B60696 /* AppBaseApi+PatchSpec.swift */,
-				BB4EA93F2341551500B60696 /* AppBaseApi+PostSpec.swift */,
-				BB4EA9412341552100B60696 /* AppBaseApi+PutSpec.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		BB58BF4A232E6AD000A13142 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,14 +294,6 @@
 				BB58BF4B232E6AD000A13142 /* Quick.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BB75E4B72393E37200AEE851 /* Response */ = {
-			isa = PBXGroup;
-			children = (
-				BB75E4B82393E3A700AEE851 /* Response.swift */,
-			);
-			path = Response;
 			sourceTree = "<group>";
 		};
 		BBBC1504233D61F600467BD4 /* Configurable */ = {
@@ -552,10 +448,7 @@
 		BBBC1539233D63B400467BD4 /* HelperClasses */ = {
 			isa = PBXGroup;
 			children = (
-				BBEBC53323406EB90020CC25 /* Networking */,
-				BBEBC53223406E560020CC25 /* Model */,
 				BB19CFA9233DA33B000BEBA1 /* CoreData */,
-				BBEBC50C2340304E0020CC25 /* Fixtures */,
 				BBBC153A233D63B400467BD4 /* Internationalization */,
 				BBBC1577233D6EFF00467BD4 /* Providers */,
 				BB19CF94233D9A40000BEBA1 /* UIKit */,
@@ -585,8 +478,6 @@
 			isa = PBXGroup;
 			children = (
 				BB19CFA5233DA2A0000BEBA1 /* CoreData */,
-				BBEBC523234064F60020CC25 /* Fixtures */,
-				BBEBC50F2340313B0020CC25 /* Operators */,
 				BBBC1555233D654300467BD4 /* StringsSpec.strings */,
 				BBBE70F32368FFFD0099D44D /* NonLocalizedStringsSpec.strings */,
 			);
@@ -698,8 +589,6 @@
 				BBBC1508233D61F600467BD4 /* CoreData */,
 				BBBC1506233D61F600467BD4 /* Extensions */,
 				BBBC151C233D61F600467BD4 /* Internationalization */,
-				BBEBC51B23403E610020CC25 /* Networking */,
-				BBEBC5022340249B0020CC25 /* Operators */,
 				BBBC1512233D61F600467BD4 /* UIKit */,
 				BBD5091A2337E2E4009CA4EE /* Ness.h */,
 				BBD5091B2337E2E4009CA4EE /* Info.plist */,
@@ -717,99 +606,10 @@
 				BBBC1585233D706300467BD4 /* CoreData */,
 				BBBC156D233D6D5D00467BD4 /* Extensions */,
 				BBBC154F233D652800467BD4 /* Internationalization */,
-				BBEBC520234062480020CC25 /* Networking */,
-				BBEBC50523402BFA0020CC25 /* Operators */,
 				BBBC157A233D6FB000467BD4 /* UIKit */,
 				BBD509272337E2E5009CA4EE /* Info.plist */,
 			);
 			path = NessTests;
-			sourceTree = "<group>";
-		};
-		BBEBC5022340249B0020CC25 /* Operators */ = {
-			isa = PBXGroup;
-			children = (
-				BBEBC51E234055330020CC25 /* Operators.swift */,
-				BBEBC503234024D20020CC25 /* Operators+Decodable.swift */,
-				BBEBC50623402D110020CC25 /* Operators+Encodable.swift */,
-			);
-			path = Operators;
-			sourceTree = "<group>";
-		};
-		BBEBC50523402BFA0020CC25 /* Operators */ = {
-			isa = PBXGroup;
-			children = (
-				BBEBC50823402D440020CC25 /* Operators+EncodableSpec.swift */,
-				BBEBC50A23402D540020CC25 /* Operators+DecodableSpec.swift */,
-			);
-			path = Operators;
-			sourceTree = "<group>";
-		};
-		BBEBC50C2340304E0020CC25 /* Fixtures */ = {
-			isa = PBXGroup;
-			children = (
-				BBEBC50D2340305D0020CC25 /* FixtureHelper.swift */,
-			);
-			path = Fixtures;
-			sourceTree = "<group>";
-		};
-		BBEBC50F2340313B0020CC25 /* Operators */ = {
-			isa = PBXGroup;
-			children = (
-				BBEBC5102340318E0020CC25 /* Person.json */,
-				BBEBC5112340318E0020CC25 /* PersonArray.json */,
-				BBEBC514234031E00020CC25 /* UnparseablePerson.json */,
-				BBEBC515234031E00020CC25 /* UnparseablePersonArray.json */,
-			);
-			path = Operators;
-			sourceTree = "<group>";
-		};
-		BBEBC51B23403E610020CC25 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				BB4EA92E23414ECA00B60696 /* Extensions */,
-				BB4EA92F23414ED600B60696 /* Requests */,
-				BB75E4B72393E37200AEE851 /* Response */,
-				BBEBC51C23403EAC0020CC25 /* AppBaseApi.swift */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		BBEBC520234062480020CC25 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				BB4EA938234154BA00B60696 /* Extensions */,
-				BBEBC5212340631F0020CC25 /* AppBaseApiSpec.swift */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		BBEBC523234064F60020CC25 /* Fixtures */ = {
-			isa = PBXGroup;
-			children = (
-				BBEBC528234065840020CC25 /* ApiDeleteRequestResponseFixture.json */,
-				BBEBC527234065840020CC25 /* ApiGetRequestResponseFixture.json */,
-				BBEBC525234065830020CC25 /* ApiPatchRequestResponseFixture.json */,
-				BBEBC526234065830020CC25 /* ApiPostRequestResponseFixture.json */,
-				BBEBC524234065830020CC25 /* ApiPutRequestResponseFixture.json */,
-			);
-			path = Fixtures;
-			sourceTree = "<group>";
-		};
-		BBEBC53223406E560020CC25 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				BBEBC519234033AC0020CC25 /* Person.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		BBEBC53323406EB90020CC25 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				BBEBC53423406ECE0020CC25 /* PersonRequest.swift */,
-				BBEBC53623406ED90020CC25 /* PersonResponse.swift */,
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -915,18 +715,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBEBC52D234065840020CC25 /* ApiDeleteRequestResponseFixture.json in Resources */,
-				BBEBC52C234065840020CC25 /* ApiGetRequestResponseFixture.json in Resources */,
 				BBBC1558233D654300467BD4 /* StringsSpec.strings in Resources */,
 				BBBE70F42368FFFD0099D44D /* NonLocalizedStringsSpec.strings in Resources */,
-				BBEBC529234065840020CC25 /* ApiPutRequestResponseFixture.json in Resources */,
-				BBEBC517234031E00020CC25 /* UnparseablePersonArray.json in Resources */,
-				BBEBC516234031E00020CC25 /* UnparseablePerson.json in Resources */,
-				BBEBC52A234065840020CC25 /* ApiPatchRequestResponseFixture.json in Resources */,
-				BBEBC52B234065840020CC25 /* ApiPostRequestResponseFixture.json in Resources */,
 				BBBC153F233D63B400467BD4 /* TestClass.strings in Resources */,
-				BBEBC5132340318E0020CC25 /* PersonArray.json in Resources */,
-				BBEBC5122340318E0020CC25 /* Person.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -958,35 +749,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBBC1527233D61F700467BD4 /* Configurable.swift in Sources */,
-				BBEBC54E234103150020CC25 /* EmptyRequest.swift in Sources */,
 				BBBC1535233D61F700467BD4 /* ArrayDataProvider.swift in Sources */,
 				BBBC1536233D61F700467BD4 /* DataProvider.swift in Sources */,
 				BB3435EA234EA93300853DE3 /* AppContextAware.swift in Sources */,
 				BBBC152C233D61F700467BD4 /* AppContext.swift in Sources */,
 				BBBC1528233D61F700467BD4 /* NSObject+Extensions.swift in Sources */,
 				BBBC152D233D61F700467BD4 /* CollectionViewArrayDataSource.swift in Sources */,
-				BBEBC504234024D20020CC25 /* Operators+Decodable.swift in Sources */,
-				BB4EA92D23414EC600B60696 /* AppBaseApi+Get.swift in Sources */,
-				BBEBC50723402D110020CC25 /* Operators+Encodable.swift in Sources */,
 				BBBC1529233D61F700467BD4 /* CoreDataProvider.swift in Sources */,
 				BBBC152B233D61F700467BD4 /* NSManagedObject+Fetch.swift in Sources */,
 				BBBC152E233D61F700467BD4 /* TableViewArrayDataSource.swift in Sources */,
-				BB4EA93123414EF400B60696 /* AppBaseApi+Post.swift in Sources */,
 				BBBC1533233D61F700467BD4 /* Strings.swift in Sources */,
 				BBBC1538233D61F700467BD4 /* ArrayDataSource.swift in Sources */,
 				BBBC1537233D61F700467BD4 /* Refreshable.swift in Sources */,
 				BBBC1530233D61F700467BD4 /* CollectionViewBlockDelegate.swift in Sources */,
-				BB4EA93723414F1500B60696 /* AppBaseApi+Delete.swift in Sources */,
-				BB75E4B92393E3A700AEE851 /* Response.swift in Sources */,
-				BB4EA93323414F0000B60696 /* AppBaseApi+Patch.swift in Sources */,
 				BBBC1532233D61F700467BD4 /* TableViewBlockDelegate.swift in Sources */,
 				BBBC152A233D61F700467BD4 /* CoreDataStack.swift in Sources */,
-				BBEBC51F234055330020CC25 /* Operators.swift in Sources */,
-				BB4EA93523414F0B00B60696 /* AppBaseApi+Put.swift in Sources */,
 				36A4F1C7234FB3AB004B61DD /* Array+NSPredicate.swift in Sources */,
 				BBBC152F233D61F700467BD4 /* PageLoaderCollectionViewDelegate.swift in Sources */,
 				BBBC1531233D61F700467BD4 /* PageLoaderTableViewDelegate.swift in Sources */,
-				BBEBC51D23403EAC0020CC25 /* AppBaseApi.swift in Sources */,
 				BBBC1534233D61F700467BD4 /* Internationalizable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -999,39 +779,27 @@
 				BB19CFB9233DAAF7000BEBA1 /* TestEntity+CoreDataClass.swift in Sources */,
 				BB19CF8F233D951A000BEBA1 /* AppContextSpec.swift in Sources */,
 				BBBC1579233D6F0000467BD4 /* RefreshableDataProvider.swift in Sources */,
-				BB4EA9422341552100B60696 /* AppBaseApi+PutSpec.swift in Sources */,
 				BBBC1574233D6E6500467BD4 /* ArrayDataSourceSpec.swift in Sources */,
-				BB4EA9402341551500B60696 /* AppBaseApi+PostSpec.swift in Sources */,
 				BB19CF9E233D9CF3000BEBA1 /* NumberCollectionViewCell.swift in Sources */,
 				BBBC1552233D652800467BD4 /* InternationalizableSpec.swift in Sources */,
 				BBBC1553233D652800467BD4 /* StringsSpec.swift in Sources */,
-				BB4EA93C234154F800B60696 /* AppBaseApi+DeleteSpec.swift in Sources */,
-				BBEBC5222340631F0020CC25 /* AppBaseApiSpec.swift in Sources */,
 				BB19CF96233D9A5B000BEBA1 /* TestTableView.swift in Sources */,
 				BBBC1576233D6E9700467BD4 /* ArrayDataProviderSpec.swift in Sources */,
-				BBEBC53723406ED90020CC25 /* PersonResponse.swift in Sources */,
-				BBEBC50B23402D540020CC25 /* Operators+DecodableSpec.swift in Sources */,
 				BBBC153E233D63B400467BD4 /* TestClass.swift in Sources */,
 				BBBC156F233D6D7C00467BD4 /* NSObject+ExtensionsSpec.swift in Sources */,
-				BBEBC53523406ECE0020CC25 /* PersonRequest.swift in Sources */,
 				BB19CFB2233DA9BE000BEBA1 /* NessTests.xcdatamodeld in Sources */,
 				BB19CF98233D9AC8000BEBA1 /* NumberTableViewCell.swift in Sources */,
-				BBEBC50923402D440020CC25 /* Operators+EncodableSpec.swift in Sources */,
 				BB19CFC5233DB1F4000BEBA1 /* CollectionViewBlockDelegateSpec.swift in Sources */,
 				BB19CFC0233DAECE000BEBA1 /* CoreDataProviderSpec.swift in Sources */,
-				BBEBC51A234033AC0020CC25 /* Person.swift in Sources */,
 				BB19CFA3233DA232000BEBA1 /* CoreDataStackSpec.swift in Sources */,
 				BB19CFC7233DB347000BEBA1 /* PageLoaderTableViewDelegateSpec.swift in Sources */,
 				BB19CFBE233DAE31000BEBA1 /* NSManagedObject+FetchSpec.swift in Sources */,
 				BB19CF9C233D9BF7000BEBA1 /* TestCollectionView.swift in Sources */,
 				BB19CFBA233DAAF7000BEBA1 /* TestEntity+CoreDataProperties.swift in Sources */,
-				BBEBC50E2340305D0020CC25 /* FixtureHelper.swift in Sources */,
 				36A4F1C9234FBC7E004B61DD /* Array+NSPredicateSpec.swift in Sources */,
 				BB19CFC3233DB050000BEBA1 /* TableViewBlockDelegateSpec.swift in Sources */,
 				BB19CFC9233DB38C000BEBA1 /* PageLoaderCollectionViewDelegateSpec.swift in Sources */,
 				BB19CF93233D99F1000BEBA1 /* TableViewArrayDataSourceSpec.swift in Sources */,
-				BB4EA93A234154DB00B60696 /* AppBaseApi+GetSpec.swift in Sources */,
-				BB4EA93E2341550700B60696 /* AppBaseApi+PatchSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
