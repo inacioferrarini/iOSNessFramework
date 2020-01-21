@@ -2,14 +2,10 @@
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-Ness Framework
+# Ness Framework
+Ness provides a set of generic classes, that can be used to reduce boilerplate from project code and eases the usage of generic datasources for `UITableView` and `UICollectionView` and `internationalization`.
 
-- [Ness](#cookiecuttermodulename)
-  - [Requirements](#requirements)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
-  - [Author](#author)
-  - [License](#license)
+Ness can be used seamesly with other frameworks, like (Awe)[https://github.com/inacioferrarini/iOSAweFramework] and (Flow)[https://github.com/inacioferrarini/iOSFlowFramework].
 
 ## Requirements
 
